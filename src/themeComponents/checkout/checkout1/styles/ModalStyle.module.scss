@@ -1,0 +1,65 @@
+.locationModal {
+  :global {
+
+    .modal-header{
+        border-bottom: 0px solid transparent;
+        justify-content: center;
+        margin-bottom: 0px !important;
+        button{
+            margin: 15px auto;
+            font-size: 18px;
+            color: #2B0000 !important;
+        }
+    }
+    .add-modal {
+       
+      label {
+        color: #2b0000;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 15px !important;
+        margin-top: 25px;
+      }
+      input{
+        height: 45px;
+        &::placeholder{
+            float: right;
+        }
+        &:focus{
+            box-shadow: 0px 0px 0px transparent;
+            border: 1px solid #2B0000;
+        }
+      }
+
+      select{
+        color: #AAAAAA;
+        font-size: 15px;
+        height: 45px;
+        &:focus{
+            box-shadow: 0px 0px 0px transparent;
+            border: 1px solid #2B0000;
+        }
+      }
+
+      textarea{
+        &:focus{
+            box-shadow: 0px 0px 0px transparent;
+            border: 1px solid #2B0000;
+        }
+      }
+
+      .modal-submit {
+        button{
+            background-color: #9C0646;
+            border: 0px solid transparent;
+            border-radius: 3px;
+            width: 100%;
+            height: 45px;
+            margin: 45px auto;
+            color: #fff;
+
+        }
+      }
+    }
+  }
+}

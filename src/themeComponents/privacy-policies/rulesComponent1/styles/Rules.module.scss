@@ -1,0 +1,28 @@
+.rulesSection {
+  :global {
+    margin: 100px 0px;
+    .rule-card {
+      margin: 30px 0px;
+      h4 {
+        color: #2b0000;
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        [data-theme="dark"] & {
+          color: #fff;
+        }
+      }
+
+      p {
+        color: rgba(43, 0, 0, 0.6);
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 2;
+        margin-bottom: 30px;
+        [data-theme="dark"] & {
+          color: #aaa;
+        }
+      }
+    }
+  }
+}

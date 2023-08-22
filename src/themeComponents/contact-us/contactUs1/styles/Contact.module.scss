@@ -1,0 +1,183 @@
+
+.contactUs{
+    :global{
+        .contact-map{
+            width: 100%;
+            height: 450px;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+
+        .contact-form{
+            margin: 80px 0px;
+            .contact-form-details{
+                padding: 55px;
+                background-color: #F4F5F7;
+                border-radius: 3px;
+                [data-theme="dark"] & {
+                    background-color: rgba(44, 48, 52, 0.95);
+                }
+                h4{
+                    color: #2B0000;
+                    font-size: 27px;
+                    font-weight: 600;
+                    margin-bottom: 41px;
+                }
+
+                label{
+                    color: #2B0000;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin-bottom: 15px;
+                    [data-theme="dark"] & {
+                        color: #fff;
+                    }
+                }
+
+                input{
+                    border: 1px solid #E0E0E0;
+                    height: 45px;
+                    background-color: #F4F5F7;
+                    margin-bottom: 25px;
+                    &::placeholder{
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: rgba(0, 0, 0, 0.60);
+                        [data-theme="dark"] & {
+                            color: #aaa;
+                        }
+                        
+                    }
+
+                    &:focus{
+                        border: 1px solid #2B0000;
+                        background: #FFF;
+                        box-shadow: 0px 0px 0px transparent;
+                    }
+
+                    [data-theme="dark"] & {
+                        background: #2c3034;
+                    }
+
+                }
+
+                textarea{
+                    border: 1px solid #E0E0E0;
+                    min-height: 150px;
+                    background-color: #F4F5F7;
+                    margin-bottom: 25px;
+                    &::placeholder{
+                        font-size: 12px;
+                        font-weight: 300;
+                        color: rgba(0, 0, 0, 0.60);
+                        [data-theme="dark"] & {
+                            color: #fff;
+                        }
+
+
+                    }
+
+                    &:focus{
+                        border: 1px solid #2B0000;
+                        background: #FFF;
+                        box-shadow: 0px 0px 0px transparent;
+                    }
+
+                    [data-theme="dark"] & {
+                        background: #2c3034;
+                    }
+
+
+                }
+
+            }
+            .form-img{
+                width: 100%;
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            button{
+                display: inline-flex;
+                min-width: 150px;
+                height: 45px;
+                padding: 15px 21px;
+                justify-content: center;
+                align-items: center;
+                background-color: #9C0646;
+                border-radius: 3px;
+                color: #fff;
+                border: 0px solid transparent;
+            }
+        }
+
+
+        .contact-details{
+            padding: 50px 0px;
+            border-top: 1px solid rgba(170, 170, 170, 0.50);
+            border-bottom: 1px solid rgba(170, 170, 170, 0.50);
+            margin-bottom: 150px;
+            margin-top : 50px;
+
+            .contact-details-card{
+                display: flex;
+                gap : 21px;
+                margin-bottom: 15px;
+                .card-icon{
+                    width: 15% !important;
+                    height: 60px;
+                    border-radius: 2px;
+                    background-color: #F4F5F7;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    [data-theme="dark"] & {
+                        background-color: #aaa;
+                    }
+                }
+
+                .card-content{
+                    width: 75%;
+                    display: flex;
+                    flex-direction: column;
+
+                    h5{
+                        color: #4C442E;
+                        font-size: 18px;
+                        font-weight: 400;
+                        margin-bottom: 15px;
+                        [data-theme="dark"] & {
+                            color: #aaa;
+                        }
+                    }
+
+                    p{
+                        color: #AAA;
+                        font-size: 14px;
+                        font-weight: 300;
+                        margin-bottom: 5px;
+                    }
+
+                    .card-links{
+                        display: flex;
+                        a{
+                            color: #AAA;
+                            font-size: 16px;
+                            font-weight: 300;
+                        }
+                        span{
+                            margin: 0px 10px;
+                            color: #AAA;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

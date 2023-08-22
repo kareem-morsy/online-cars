@@ -1,0 +1,105 @@
+.emailSection {
+  :global {
+    position: relative;
+    width: 60%;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    margin-bottom: -75px;
+    left: 20%;
+    right: 20%;
+    background-color: #fff;
+    z-index: 9;
+    border: 1px solid #a61f59;
+    padding: 0px 45px;
+    [data-theme="dark"] & {
+      background-color: #212529;
+    }
+
+    @media (max-width: 1399px) {
+      width: 80%;
+      left: 10%;
+      right: 10%;
+      padding: 0px 10px;
+      flex-wrap: wrap;
+      height: 150px;
+    }
+
+    h4 {
+      color: #2b0000;
+      font-weight: bold;
+      width: 25%;
+      [data-theme="dark"] & {
+        color: #fff;
+      }
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      span {
+        color: #9c0646;
+        margin-right: 5px;
+      }
+
+      &::after {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background-color: #9c0646;
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+
+    form {
+      width: 75%;
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      .form-elements {
+        display: flex;
+        flex-wrap: nowrap;
+        input {
+          background: linear-gradient(0deg, #f4f5f7 0%, #f4f5f7 100%),
+            linear-gradient(0deg, #f4f5f7 0%, #f4f5f7 100%), #f4f5f7;
+          border: 0px solid transparent;
+          height: 41px;
+          width: 80%;
+          padding: 0px 5px;
+          border-radius: 0px 2px 2px 0px;
+          text-align: right;
+          [dir="ltr"] & {
+            float: left;
+          }
+          &::placeholder {
+            padding-right: 5px;
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 15px;
+            [dir="ltr"] & {
+              float: left;
+              padding-left: 5px;
+            }
+            [data-theme="dark"] & {
+              color: #aaa;
+            }
+          }
+
+          [data-theme="dark"] & {
+            background: #2c3034;
+            color: #fff;
+          }
+        }
+
+        button {
+          width: 20%;
+          height: 41px;
+          background-color: #2b0000;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 2px 0px 0px 2px;
+        }
+      }
+    }
+  }
+}
