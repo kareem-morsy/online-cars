@@ -1,0 +1,24 @@
+.CurrentOffer{
+    :global{
+        margin: 70px 0px;
+        .current-offer-img{
+            width: 100%;
+            position: relative;
+            padding-top: 35%;
+            overflow: hidden;
+            img{
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+
+            }
+            .current-overlay{
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

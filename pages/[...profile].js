@@ -1,5 +1,5 @@
 import { NextSeo } from "next-seo";
-import Header2 from "../src/themeComponents/headers/header2";
+// import Header2 from "../src/themeComponents/headers/header2";
 import Features from "../src/themeComponents/features/features1";
 import ProfileSection from "../src/themeComponents/profile/profile1";
 import FooterSection from "../src/themeComponents/footers/footer1";

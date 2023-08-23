@@ -1,0 +1,45 @@
+.advertise {
+  :global {
+    margin: 100px 0px;
+    .advertise-large-card {
+      position: relative;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      .advertise-large-img {
+        position: relative;
+        padding-top: 60%;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          border-radius: 10px;
+        }
+      }
+
+    }
+
+    .advertise-small-card {
+      position: relative;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      .advertise-small-img {
+        position: relative;
+        padding-top: 125%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 10px;
+      }
+
+      img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

@@ -1,41 +1,21 @@
 .features {
   :global {
-    height: 350px;
     width: 100%;
     position: relative;
     z-index: 5;
+    margin-top: -100px;
 
     @media (max-width: 767px) {
       height: 500px;
     }
 
-    .feature-img {
-      width: 100%;
-      height: 100%;
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .features-overlay {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background-color: rgba(156, 6, 70, 0.88);
-      width: 100%;
-      height: 100%;
-      [data-theme = "dark"] &{
-        background-color: rgba(44, 48, 52 , .95);
-      }
-    }
-
     .features-cards {
+      background-color: #4158f2;
+      padding: 50px 70px;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: space-between;
-      width: 90%;
-      margin: 180px auto;
+      border-radius: 10px;
 
       @media (max-width: 1199px) {
         width: 90%;
@@ -53,6 +33,33 @@
         display: flex;
         margin: 10px 21px;
 
+        svg{
+          width: 45px !important;
+          height: 45px !important;
+        }
+
+        .features-text {
+          margin-right: 25px;
+          color: #ffffff;
+
+          [dir="ltr"] & {
+            margin-right: auto;
+            margin-left: 10px;
+          }
+          h6 {
+            font-size: 14px;
+            margin-bottom: 5px;
+            font-weight: 600;
+          }
+
+          p {
+            font-size: 12px;
+            font-weight: 400;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.62);;
+          }
+        }
+
         @media (max-width: 767px) {
           margin: 15px 7px;
           width: 100%;
@@ -61,27 +68,6 @@
         @media (min-width: 768px) and (max-width: 1199px) {
           margin: 15px 7px;
           width: 42%;
-        }
-
-        .features-text {
-          margin-right: 10px;
-          color: #ffffff;
-
-          [dir="ltr"] & {
-            margin-right: auto;
-            margin-left: 10px;
-          }
-          h6 {
-            font-size: 16px;
-            margin-bottom: 5px;
-            font-weight: 600;
-          }
-
-          p {
-            font-size: 13px;
-            font-weight: 400;
-            margin-top: 10px;
-          }
         }
       }
     }

@@ -1,0 +1,146 @@
+.reviewsSection {
+  :global {
+    margin: 100px 0px;
+    position: relative;
+
+    .section-title {
+      margin-bottom: 60px;
+      width: 85%;
+
+      h2 {
+        color: #040414;
+        font-size: 28px;
+        font-weight: 700;
+        display: inline-block;
+      }
+
+      [data-theme="dark"] & {
+        color: #fff;
+      }
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 10px;
+        background-color: #4158f2;
+        display: inline-block;
+        margin: 25px 0px 0px 15px;
+        border-radius: 10px;
+        transform: rotate(90deg);
+      }
+
+      &::after {
+        content: "";
+        width: 75%;
+        height: 2px;
+        background-color: #d3d3d3;
+        margin-right: 35px;
+        display: inline-block;
+      }
+    }
+
+    .review-card {
+      border-radius: 10px;
+      border: 3px solid rgba(0, 0, 0, 0.05);
+      background: #FFF;
+      padding: 41px;
+
+      .review-info {
+        display: flex;
+        gap: 15px;
+      }
+
+      .user-img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+
+      .user-info {
+        margin-bottom: 25px;
+
+        h4 {
+          color: #040414;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 15px;
+        }
+
+        p {
+          color: #808080;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+
+      .review-desc {
+        color: #202020;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+
+
+
+    .mainSwiper {
+      padding-bottom: 100px;
+
+    }
+
+    .swiper-pagination-bullets {
+      width: 11%;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0px auto;
+      border-radius: 10px;
+      border: 1px solid rgba(65, 88, 242, 0.2);
+      right: 39%;
+      left: 39%;
+
+      .swiper-pagination-bullet-active {
+        background-color: #4158F2;
+        width: 25px;
+        height: 10px;
+        border-radius: 10px;
+      }
+
+    }
+
+    .swiper-bttns {
+      position: absolute;
+      left: 16%;
+      top: 0;
+      display: flex;
+      gap: 30px;
+      z-index: 9;
+
+      button {
+        border: 1px solid #4158F2;
+        border-radius: 10px;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-next {
+        background-color: #4158f2;
+      }
+
+      .swiper-prev {
+        background-color: #fff;
+      }
+    }
+
+  }
+}

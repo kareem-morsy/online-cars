@@ -1,0 +1,55 @@
+.introSection {
+  :global {
+    background-color: #f6f6ff;
+    padding: 35px 0px 150px 0px;
+    .intro-cards {
+      .intro-card {
+        position: relative;
+        margin-bottom: 30px;
+        .intro-card-img {
+          position: relative;
+          padding-top: 60%;
+          width: 100%;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        img {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .intro-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .intro-swiper {
+      .slide {
+        .swiper-card {
+          position: relative;
+          border-radius: 10px;
+          .swiper-card-img {
+            position: relative;
+            padding-top: 62%;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              position: absolute;
+              inset: 0;
+              height: 100%;
+              width: 100%;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

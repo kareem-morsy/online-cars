@@ -1,31 +1,34 @@
 import React from "react";
 import styles from "./styles/RecentlyAdd.module.scss";
 import RecentlyCard from "./RecentlyCard";
-import { productsSection } from "../../../../data";
-import ProductMobSlider from "./ProductMobSlider";
+import { filterSection } from "../../../../data";
 import { Col } from "react-bootstrap";
+import Link from "next/link";
 
 const RecentlyAdd = () => {
   return (
     <>
       <section className={styles.recentlyAdd}>
         <div className="container">
-          <h2 className="section-title text-center">وصل حديثا</h2>
+        <div className="section-title">
+            <h2>احدث المنتجات</h2>
+            <Link href="/">
+              <a className="title-button">مشاهدة الكل</a>
+            </Link>
+          </div>
 
-          <div className="products-desktop">
             <div className="row">
-              {productsSection?.map((product, index) => {
+              {filterSection?.map((product, index) => {
                 return (
                   <Col xl={3} lg={4} md={12} key={index}>
-                    <RecentlyCard product={product} />
+                    <RecentlyCard  product={product} />
                   </Col>
                 );
               })}
             </div>
           </div>
 
-          <ProductMobSlider />
-        </div>
+     
       </section>
     </>
   );

@@ -16,24 +16,21 @@ const BlogSecCard = ({ blog }) => {
         </div>
 
         <div className="blog-card-content">
-          <div className="blog-card-details">
-            <div className="writer">
-              <User />
-              <p>{blog?.userName}</p>
-            </div>
-
-            <div className="blog-date">
-              <Calendar />
-              <p>August 3, 2022</p>
-            </div>
-          </div>
-
           <Link href="/blogs/1">
             <a className="blog-title">{blog?.title}</a>
           </Link>
 
+          <div className="blog-card-details">
+            <div className="blog-date">
+              <p>August 3, 2022</p>
+              <Calendar />
+            </div>
+          </div>
+
           <Link href="/blogs/1">
-            <a><FormattedMessage id="readMore"/></a>
+            <a className="read-more">
+              <FormattedMessage id="readMore" />
+            </a>
           </Link>
         </div>
       </div>

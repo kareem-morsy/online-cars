@@ -1,35 +1,72 @@
-import Link from "next/link";
 import style from "./styles/BlogSection.module.scss";
 import BlogSecCard from "./BlogSecCard";
 import { blogSections } from "../../../../data";
-import BlogMobSlider from "./BlogMobSlider";
 import { FormattedMessage } from "react-intl";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
+import Right from './assets/images/right-arrow.svg';
+import Left from './assets/images/left-arrow.svg';
+
+
 
 const BlogSection = () => {
   return (
     <>
       <section className={style.blogSec}>
         <div className="container">
-          <h2 className="section-title text-center">أحدث التدوينات</h2>
-          <div className="blogs-desktop">
-            <div className="row">
-              {blogSections?.map((blog, index) => {
-                return (
-                  <div className="col-xl-3 col-lg-4 col-md-6 col-12" key={index}>
-                    <BlogSecCard blog={blog} />
-                  </div>
-                );
-              })}
-            </div>
+          <div className="section-title">
+            <h2>اخر الاخبار</h2>
           </div>
 
-          <BlogMobSlider />
+          <Swiper
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+              delay: 1000,
+              disableOnInteraction: false,
+            }}
 
-          <div className="allBlogs">
-            <Link href="/blogs">
-              <a><FormattedMessage id="news"/></a>
-            </Link>
+            breakpoints={{
+
+              990: {
+                slidesPerView: 4,
+              },
+              480: {
+                slidesPerView: 2,
+              },
+
+              1: {
+                slidesPerView: 1,
+              },
+            }}
+            pagination={true}
+            navigation={{
+              nextEl: ".blog-next",
+              prevEl: ".blog-prev",
+            }}
+            modules={[Navigation, Pagination]}
+            className="mainSwiper"
+          >
+
+
+            {blogSections?.map((blog, index) => {
+              return (
+                <SwiperSlide>
+
+                  <BlogSecCard blog={blog} />
+
+                </SwiperSlide>
+              );
+            })}
+
+
+          </Swiper>
+
+          <div className="swiper-bttns">
+            <button className="blog-prev"><Right /></button>
+            <button className="blog-next"><Left /></button>
           </div>
+
         </div>
       </section>
     </>
