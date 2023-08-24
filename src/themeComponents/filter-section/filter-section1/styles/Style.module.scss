@@ -1,142 +1,208 @@
 .filterSection {
-    :global {
-        margin: 100px 0px 60px 0px;
+  :global {
+    margin: 100px 0px 60px 0px;
 
-        .nav-tabs {
-            border: 0px solid transparent !important;
-            justify-content: center;
-            width: 100%;
-            margin: auto;
-            gap: 65px;
-            height: 45px;
-            align-items: center;
-            border-radius: 3px;
-            margin-bottom: 50px !important;
+    .nav-tabs {
+      border: 0px solid transparent !important;
+      justify-content: center;
+      width: 100%;
+      margin: auto;
+      gap: 65px;
+      height: 45px;
+      align-items: center;
+      border-radius: 3px;
+      margin-bottom: 50px !important;
 
-            @media (max-width: 550px) {
-                padding: 10px 0px;
-                min-height: 50px !important;
-                height: auto;
-                gap: 15px;
-            }
+      @media (max-width: 550px) {
+        padding: 10px 0px;
+        min-height: 50px !important;
+        height: auto;
+        gap: 15px;
+      }
 
-            .nav-link {
-                border-radius: 10px;
-                border: 1px solid #040414;
-                padding: 15px 45px;
-                color: #040414;
-                text-align: center;
-                font-size: 16px;
-                font-weight: 500;
+      .nav-link {
+        border-radius: 10px;
+        border: 1px solid #040414;
+        padding: 15px 45px;
+        color: #040414;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
 
-                &:active {
-                    border-radius: 10px;
-                    background: #4158F2;
-                    color: #fff;
-                }
-
-                color: #000;
-                font-weight: 300;
-
-                [data-theme="dark"] & {
-                    color: #fff;
-                }
-
-            }
-
-            [data-theme="dark"] & {
-                background-color: #2b0000;
-            }
-
-            .active {
-                border-radius: 10px;
-                background-color: #4158F2 !important;
-                color: #fff;
-                border: 1px solid #4158F2;
-            }
-
-            .nav-item {
-                button {
-                    background-color: transparent;
-                }
-
-                @media (max-width: 550px) {
-                    width: 100%;
-                    text-align: center;
-                    margin-bottom: 10px;
-                    display: flex;
-                    justify-content: center;
-                }
-            }
+        &:active {
+          border-radius: 10px;
+          background: #4158f2;
+          color: #fff;
         }
 
+        color: #000;
+        font-weight: 300;
 
-        .main-card {
-            background-color: #F6F6F6;
-            border: 10px;
-            padding: 21px;
-            margin-bottom: 30px;
-            width: 100%;
-            min-height: 500px;
-            border-radius: 10px;
-
-            .main-card-img {
-                position: relative;
-                width: 100%;
-                height: 60%;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                }
-
-            }
-
-            .main-card-title {
-                color: #040414;
-                font-size: 18px;
-                font-weight: 400;
-                text-align: center;
-                margin: 30px auto 15px auto;
-                display: block;
-
-            }
-
-            .main-card-desc {
-                color: rgba(0, 0, 0, 0.50);
-                text-align: center;
-                font-size: 16px;
-                font-weight: 300;
-                margin: 15px auto;
-            }
-
-            .stars {
-                margin: 15px 0px;
-                text-align: center;
-            }
-
-            .main-card-price {
-                display: flex;
-                gap: 15px;
-                margin: 15px auto;
-                justify-content: center;
-
-                .current-price {
-                    color: #040414;
-                    text-align: right;
-                    font-size: 16px;
-                    font-weight: 400;
-                }
-
-                .past-price {
-                    color: rgba(32, 32, 32, 0.30);
-                    font-size: 14px;
-                    font-weight: 400;
-                    text-decoration: line-through;
-                }
-            }
-
+        [data-theme="dark"] & {
+          color: #fff;
         }
+      }
+
+      [data-theme="dark"] & {
+        background-color: #2b0000;
+      }
+
+      .active {
+        border-radius: 10px;
+        background-color: #4158f2 !important;
+        color: #fff;
+        border: 1px solid #4158f2;
+      }
+
+      .nav-item {
+        button {
+          background-color: transparent;
+        }
+
+        @media (max-width: 550px) {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+          display: flex;
+          justify-content: center;
+        }
+      }
     }
+
+    .main-card {
+      background-color: #f6f6f6;
+      border: 10px;
+      padding: 21px;
+      margin-bottom: 30px;
+      width: 100%;
+      min-height: 500px;
+      border-radius: 10px;
+
+      .main-card-img {
+        position: relative;
+        width: 100%;
+        height: 60%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        .overlay-link {
+          position: absolute;
+          inset: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .buttons-overlay {
+          position: absolute;
+          opacity: 0;
+          bottom: 10px;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          flex-direction: row;
+          z-index: 1;
+          transition: all 0.3s ease-in-out;
+          gap: 15px;
+          z-index: 9;
+
+          button {
+            border: 0px solid transparent;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.3s;
+            border-radius: 10px;
+            &:nth-of-type(2) {
+              transition-delay: 0.1s;
+            }
+            &:nth-of-type(3) {
+              transition-delay: 0.2s;
+            }
+            &:nth-of-type(4) {
+              transition-delay: 0.3s;
+            }
+
+            img {
+              width: 21px;
+              height: 21px;
+            }
+
+            svg {
+              transition: 0.3s;
+              filter: brightness(1) invert(0);
+            }
+
+            &:hover {
+              background-color: #4158f2;
+              color: #fff;
+              svg {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+      }
+
+      .main-card-title {
+        color: #040414;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+        margin: 30px auto 15px auto;
+        display: block;
+      }
+
+      .main-card-desc {
+        color: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 15px auto;
+      }
+
+      .stars {
+        margin: 15px 0px;
+        text-align: center;
+      }
+
+      .main-card-price {
+        display: flex;
+        gap: 15px;
+        margin: 15px auto;
+        justify-content: center;
+
+        .current-price {
+          color: #040414;
+          text-align: right;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .past-price {
+          color: rgba(32, 32, 32, 0.3);
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: line-through;
+          
+        }
+      }
+
+      &:hover {
+        .buttons-overlay {
+          opacity: 1;
+          button {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

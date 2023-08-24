@@ -27,12 +27,12 @@ const SingleProduct = () => {
             ]}
         />
 
-        <Header2/>
+        {/* <Header2/>
         <BreadCramb pageName={<FormattedMessage id="product" />}/>
         <ProductDetails/>
         <NewsLetter/>
         <Features/>
-        <FooterSection/>
+        <FooterSection/> */}
     </>
   )
 }

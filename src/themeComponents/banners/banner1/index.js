@@ -1,21 +1,30 @@
-import React from 'react'
-import styles from './styles/ShoppingSec.module.scss'
-import Image from "next/future/image";
-import shopping from './assets/images/shopping.png'
-import Link from 'next/link';
- 
-const ShoppingSection = () => {
-  return (
-    <>
-        <section className={styles.shoppingSec}>
-            <Link href="/">
-                <a className='shopping-banner'>
-                    <Image src={shopping} alt="shopping-banner" width={1920} height={700} />
-                </a>
-            </Link>
-        </section>
-    </>
-  )
+import { FormattedMessage } from 'react-intl'
+import style from './styles/Style.module.scss'
+import Link from 'next/link'
+import Image from 'next/future/image'
+import vedioBanner from './assets/images/vedioBanner.png'
+
+
+
+
+
+
+const VedioBanner = () => {
+    return (
+        <>
+            <section className={style.videoBanner}>
+                <div className='container'>
+                    <div className='videoBanner-img'>
+                        <Image src={vedioBanner} alt="image" />
+                        <Link href="/">
+                            <a className='card-overlay'></a>
+                        </Link>
+                        
+                    </div>
+                </div>
+            </section>
+        </>
+    )
 }
 
-export default ShoppingSection
+export default VedioBanner;

@@ -16,18 +16,18 @@ const BreadCramb = ({pageName}) => {
 
                         <li>
                             <Link href='/'>
-                                <a><FormattedMessage id="home"/></a>
+                                <a className="home-text"><FormattedMessage id="home"/></a>
                             </Link>
                         </li>
 
                         <li>
                             <span>
-                                <LeftArrow  fill="#8E8E8E"/>
+                                /
                             </span>
                         </li>
                         
 
-                        <li>{pageName}</li>
+                        <li className="current-link">{pageName}</li>
 
                        
                     </ul>

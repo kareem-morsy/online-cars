@@ -53,7 +53,7 @@ const BlogSection = () => {
               return (
                 <SwiperSlide>
 
-                  <BlogSecCard blog={blog} />
+                  <BlogSecCard blog={blog}  key={index}/>
 
                 </SwiperSlide>
               );

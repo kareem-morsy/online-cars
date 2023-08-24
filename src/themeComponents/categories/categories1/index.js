@@ -1,17 +1,18 @@
 import React from "react";
 import styles from "./styles/Style.module.scss";
 import CategoryCard from "./CategoryCard";
-import { swiperCategory } from "./../../../../data";
+import { categories } from './../../../../data';
 
 const Categories = () => {
+  console.log("categories",categories)
   return (
     <>
       <section className={styles.Categories}>
         <div className="container">
           <div className="row">
-            {swiperCategory.map((category, index) => {
+            {categories?.map((category, index) => {
               return (
-                <div className="col-xl-4 col-md-6 col-12" key={index}>
+                <div className="col-xl-3 col-md-6 col-12" key={index}>
                   <CategoryCard category={category} />
                 </div>
               );

@@ -1,0 +1,26 @@
+.videoBanner {
+  :global {
+    margin: 100px 0px;
+    .videoBanner-img{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 35%;
+      border-radius: 10px;
+      img{
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        border-radius: 10px;
+      }
+
+      .card-overlay{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+  }
+}

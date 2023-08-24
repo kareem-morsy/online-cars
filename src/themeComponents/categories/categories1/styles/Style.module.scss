@@ -1,64 +1,62 @@
 .Categories {
   :global {
     margin: 100px 0px;
-    width: 100%;
     .categories-card {
-      height: auto;
+      padding: 15px;
+      min-height: 360px;
       width: 100%;
-      margin: 10px auto;
-      border-radius: 2px;
-      transition: 0.2s;
-      position: relative;
+      border-radius: 10px;
+      border: 1px solid #eaeaea;
+      background: #fff;
+      margin-bottom: 30px;
       .category-image {
         position: relative;
-        padding-top: 85%;
         overflow: hidden;
-        z-index: 1;
+        padding-top: 68%;
         img {
           width: 100%;
           height: 100%;
           position: absolute;
           inset: 0;
-          z-index: 1;
         }
       }
-    }
 
-    .categories-card-overlay {
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-    }
-
-   
-
-    .category-title {
-      position: absolute;
-      top: 30px;
-      right: 15px;
-      color: #2b0000;
-      z-index: 9;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 600;
-      [dir ="ltr"] &{
-        left: 15px;
-        right: auto;
+      .category-details {
+        .category-name {
+          color: #000;
+          font-size: 14px;
+          font-weight: 300;
+          margin: 15px 0px;
+        }
+        .category-title {
+          color: #000;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 15px 0px;
+        }
       }
-      &::before {
-        content: "";
-        width: 45px;
-        height: 1px;
-        display: block;
-        background-color: #9c0646;
-        margin-bottom: 8px;
+
+      .categories-shopping {
+        border-radius: 10px;
+        border: 1px solid #eaeaea;
+        background: #fff;
+        color: #000;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 50%;
+        border-radius: 10px;
+        height: 45px;
+        gap :10px;
+        margin: 15px 0px;
+
       }
     }
-
-
-    
   }
 }

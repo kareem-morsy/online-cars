@@ -10,25 +10,25 @@ const RecentlyAdd = () => {
     <>
       <section className={styles.recentlyAdd}>
         <div className="container">
-        <div className="section-title">
+          <div className="section-title">
             <h2>احدث المنتجات</h2>
             <Link href="/">
               <a className="title-button">مشاهدة الكل</a>
             </Link>
           </div>
 
-            <div className="row">
-              {filterSection?.map((product, index) => {
-                return (
-                  <Col xl={3} lg={4} md={12} key={index}>
-                    <RecentlyCard  product={product} />
-                  </Col>
-                );
-              })}
-            </div>
+          <div className="row">
+            {filterSection?.map((product, index) => {
+              return (
+                <Col xl={3} lg={4} md={12} key={index}>
+                  <RecentlyCard product={product} />
+                </Col>
+              );
+            })}
           </div>
+        </div>
 
-     
+
       </section>
     </>
   );

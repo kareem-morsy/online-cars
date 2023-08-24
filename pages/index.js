@@ -9,6 +9,9 @@ import ReviewsSection from './../src/themeComponents/customer-reviews/customer-r
 import Advertise from './../src/themeComponents/banners/banner3/index';
 import FilterSection from './../src/themeComponents/filter-section/filter-section1/index';
 import RecentlyAdd from './../src/themeComponents/recently-arrived/recently-arrived1/index';
+import VedioBanner from './../src/themeComponents/banners/banner1/index';
+import SpecialOffers from "../src/themeComponents/special-offer/special-offer1";
+import BrandSection from './../src/themeComponents/brands/brands1/index';
 
 export default function Home() {
   return (
@@ -33,11 +36,13 @@ export default function Home() {
       <Features/>
       <FilterSection/>
       <CurrentOffer/>
+      <SpecialOffers/>
+      <VedioBanner/>
       <RecentlyAdd/>
       <Advertise/>
+      <BrandSection/>
       <ReviewsSection/>
       <BlogSecCard/>
-      
       <Footer/>
       
     </>

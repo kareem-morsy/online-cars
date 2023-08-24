@@ -1,119 +1,220 @@
-import React from "react";
+import Link from "next/link";
 import styles from "./styles/Brands.module.scss";
+import Tab from "react-bootstrap/Tab";
+import Tabs from "react-bootstrap/Tabs";
+import tab1 from "./assets/images/tab1.png";
+import tab2 from "./assets/images/tab2.png";
+import tab3 from "./assets/images/tab3.png";
+import tab4 from "./assets/images/tab4.png";
+import tab5 from "./assets/images/tab5.png";
+import tab6 from "./assets/images/tab6.png";
+import tab7 from "./assets/images/tab7.png";
+import Arrow from "./assets/images/arrow.svg";
 import Image from "next/future/image";
-import brand1 from "./assets/images/brand1.png";
-import brand2 from "./assets/images/brand2.png";
-import brand3 from "./assets/images/brand3.png";
-import brand4 from "./assets/images/brand4.png";
-import brand5 from "./assets/images/brand5.png";
-import brand6 from "./assets/images/brand6.png";
-import LeftArrow from "./assets/images/left-arrow.svg";
-import RightArrow from "./assets/images/right-arrow.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+import BrandsCard from "./BrandsCard";
+import { brandSection } from "../../../../data";
 
-const Brands = () => {
+const BrandSection = () => {
+  const image1 = <Image src={tab1} alt="Image" />;
+  const image2 = <Image src={tab2} alt="Image" />;
+  const image3 = <Image src={tab3} alt="Image" />;
+  const image4 = <Image src={tab4} alt="Image" />;
+  const image5 = <Image src={tab5} alt="Image" />;
+  const image6 = <Image src={tab6} alt="Image" />;
+  const image7 = <Image src={tab7} alt="Image" />;
   return (
     <>
       <section className={styles.brandSection}>
         <div className="container">
-          <h2 className="section-title text-center">اشهر الماركات</h2>
+          <div className="section-title">
+            <h2>تسوق حسب البراند</h2>
+            <Link href="/">
+              <a className="title-button">مشاهدة الكل</a>
+            </Link>
+          </div>
 
-          <div className="brands-slider">
-            <Swiper
-              spaceBetween={10}
-              grabCursor={true}
-              loop ={true}
-              centerInsufficientSlides
-              breakpoints={{
-                1199: {
-                  slidesPerView: 6,
-                },
-                1024: {
-                  slidesPerView: 4,
-                },
+          <div className="brands-tabs">
+            <Tabs defaultActiveKey="brand1" id="filterTabs" className="mb-3">
+              <Tab eventKey="brand1" title={image1}>
+                <div className="row">
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
 
-                767: {
-                  slidesPerView: 3,
-                },
-                550: {
-                  slidesPerView: 2,
-                },
+                  <div className="col-md-4 col-12">
+                    <div className="brand-main-card">
+                      <div className="brand-main-img">
+                        <Image src={tab1} alt="Image" />
+                      </div>
 
-                1: {
-                  slidesPerView: 2,
-                },
-              }}
-              navigation={{
-                nextEl: ".k-next",
-                prevEl: ".k-prev",
-              }}
-              slidesPerView={6}
-              modules={[Navigation]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand1} alt="instagram" />
+                      <p className="brand-main-desc">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                      </p>
+
+                      <Link href="/">
+                        <a className="brand-main-link">
+                          عرض منتجات البراند
+                          <span>
+                            <Arrow />
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand2} alt="instagram" />
+              </Tab>
+
+              <Tab eventKey="brand2" title={image2}>
+                <div className="row">
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-main-card">
+                      <div className="brand-main-img">
+                        <Image src={tab1} alt="Image" />
+                      </div>
+
+                      <p className="brand-main-desc">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                      </p>
+
+                      <Link href="/">
+                        <a className="brand-main-link">
+                          عرض منتجات البراند
+                          <span>
+                            <Arrow />
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand3} alt="instagram" />
+              </Tab>
+
+              <Tab eventKey="brand3" title={image3}>
+                <div className="row">
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-main-card">
+                      <div className="brand-main-img">
+                        <Image src={tab1} alt="Image" />
+                      </div>
+
+                      <p className="brand-main-desc">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                      </p>
+
+                      <Link href="/">
+                        <a className="brand-main-link">
+                          عرض منتجات البراند
+                          <span>
+                            <Arrow />
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand4} alt="instagram" />
+              </Tab>
+
+              <Tab eventKey="brand4" title={image4}>
+                <div className="row">
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-main-card">
+                      <div className="brand-main-img">
+                        <Image src={tab1} alt="Image" />
+                      </div>
+
+                      <p className="brand-main-desc">
+                        هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء
+                        لصفحة ما سيلهي القارئ عن التركيز على الشكل
+                      </p>
+
+                      <Link href="/">
+                        <a className="brand-main-link">
+                          عرض منتجات البراند
+                          <span>
+                            <Arrow />
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="col-md-4 col-12">
+                    <div className="brand-cards">
+                      {brandSection?.map((product, index) => {
+                        return <BrandsCard product={product} key={index} />;
+                      })}
+                    </div>
+                  </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand5} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand6} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand3} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand4} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand2} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand1} alt="instagram" />
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="silde">
-                  <Image src={brand4} alt="instagram" />
-                </div>
-              </SwiperSlide>
-            </Swiper>
-            <button className="k-next">
-              <RightArrow />
-            </button>
-            <button className="k-prev">
-              <LeftArrow />
-            </button>
+              </Tab>
+
+              <Tab eventKey="brand5" title={image5}>
+                <div className="row"></div>
+              </Tab>
+
+              <Tab eventKey="brand6" title={image6}>
+                <div className="row"></div>
+              </Tab>
+
+              <Tab eventKey="brand7" title={image7}>
+                <div className="row"></div>
+              </Tab>
+            </Tabs>
           </div>
         </div>
       </section>
@@ -121,4 +222,4 @@ const Brands = () => {
   );
 };
 
-export default Brands;
+export default BrandSection;

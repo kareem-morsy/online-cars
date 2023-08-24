@@ -50,6 +50,34 @@
           }
         }
       }
+
+      .swiper-pagination-bullets {
+        max-width: 115px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0px auto;
+        border-radius: 10px;
+        right: 39%;
+        left: 39%;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.15);
+        bottom: 60px;
+
+        .swiper-pagination-bullet {
+          background-color: #c7c7c7 !important;
+          opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+          background-color: #4158f2 !important;
+          width: 25px;
+          height: 10px;
+          border-radius: 10px;
+        }
+      }
     }
   }
 }
