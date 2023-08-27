@@ -25,12 +25,12 @@ const Blogs = () => {
         ]}
       />
 
-      <Header2 />
+      {/* <Header2 />
       <BreadCramb pageName={<FormattedMessage id="blog"/>}/>
       <BlogsComponent/>
       <NewsLetter/>
       <Features />
-      <FooterSection />
+      <FooterSection /> */}
     </>
   );
 };

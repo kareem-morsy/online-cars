@@ -1,121 +1,81 @@
+import { filterPage } from "../../../../data";
 import style from "./styles/Products.module.scss";
-import Form from "react-bootstrap/Form";
-import Grid from "./assets/images/grid.svg";
-import Collection from "./assets/images/collection.svg";
-import Link from "next/link";
-import { useState } from "react";
-import Filters from "./Filters";
-import { productsData } from "../../../../data";
 import ProductCard from "./ProductCard";
-import ProductCardColumn from "./ProductCardColumn";
-import { FormattedMessage } from "react-intl";
-import Filter from './assets/images/filters.svg'
-import Close from './assets/images/close.svg'
+import Multi from "./assets/images/multi.svg";
+import Single from "./assets/images/single.svg";
+import Form from "react-bootstrap/Form";
+import Pagination from "react-bootstrap/Pagination";
+import Filters from './Filters';
 
 const Products = () => {
-  const [shapeView, setShapeView] = useState(true);
-  const [sideBarShow, setSideBarShow] = useState(false);
-
-  const toggleClass = () => {
-    setSideBarShow(!sideBarShow);
-  };
-
-  const renderProductsColumn = productsData?.map((product, index) => {
-    return <ProductCardColumn product={product} key={index} />;
-  });
-
   return (
     <>
-      <div className={style.productsSection}>
-        <div className="filter-overlay"></div>
+      <section className={style.productsSection}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-12">
-              <Filters sideBarShow={sideBarShow} toggleClass={toggleClass} />
+            <div className="col-md-3 col-12">
+              <Filters/>
             </div>
 
-            <div className="col-lg-9 col-12">
-              <div className="container">
-                <div className="products-filter-show">
-                  <div className="product-show-head">
-                    <div className="mob-show">
-                      <h4><FormattedMessage id="products"/></h4>
-                      <button
-                        type="button"
-                        className="mob-categories"
-                        onClick={toggleClass}
-                      >
-                        <Filter/>
+            <div className="col-md-9 col-12">
+              <div className="classification-section">
+                <div className="classification">
+                  <div className="methods">
+                    <div className="products-show">
+                      <p>عرض</p>
+                      <button>
+                        <Multi />
+                      </button>
+                      <button>
+                        <Single />
                       </button>
                     </div>
-                    <div className="grid-show">
-                      <p><FormattedMessage id="show"/></p>
-                      <div className="grid-show-btns">
-                        <button onClick={() => setShapeView(true)}>
-                          <Collection />
-                        </button>
-                        <button onClick={() => setShapeView(false)}>
-                          <Grid />
-                        </button>
-                      </div>
-                    </div>
 
-                    <div className="show-num">
-                      <p><FormattedMessage id="watch"/></p>
-                      <div className="show-num-bttns">
-                        <button>6</button>
-                        <button>12</button>
-                        <button>18</button>
-                        <button>24</button>
-                        <button>30</button>
-                      </div>
-                    </div>
-
-                    <div className="product-sort">
-                      <p><FormattedMessage id="orderWith"/></p>
+                    <div className="products-select">
                       <Form.Select aria-label="Default select example">
-                        <option value="1" className="sort-option">
-                          الاقل سعرا
-                        </option>
-                        <option value="2" className="sort-option">
-                          الأعلى سعرا
-                        </option>
-                        <option value="3" className="sort-option">
-                          نوع المنتج
-                        </option>
+                        <option>المنتجات</option>
+                        <option value="1">أحدث المنتجات</option>
+                        <option value="2">الأكثر مبيعا</option>
+                        <option value="3">الأكثر طلبا</option>
                       </Form.Select>
                     </div>
                   </div>
                 </div>
 
-                {shapeView ? (
-                  <div className="products-cards-grid">
-                    <div className="row">
-                      {productsData?.map((product, index) => {
-                        return (
-                          <div className="col-xl-4 col-md-6 col-12" key={index}>
-                            <ProductCard product={product} />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="products-cards-column">
-                    <div className="row">{renderProductsColumn}</div>
-                  </div>
-                )}
-
-                <div className="products-sort-link">
-                  <Link href="/products">
-                    <a><FormattedMessage id="moreproducts"/></a>
-                  </Link>
+                <div className="info">
+                  <h6>النتائج :</h6>
+                  <p>عرض</p>
+                  <span>9</span>
+                  <p>من</p>
+                  <span>20</span>
                 </div>
+              </div>
+
+              <div className="products">
+                <div className="row">
+                  {filterPage.map((product, index) => {
+                    return (
+                      <div className="col-md-4 col-12" key={index}>
+                        <ProductCard product={product} />
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="pagination-section">
+                <Pagination>
+                  <Pagination.Item>{1}</Pagination.Item>
+                  <Pagination.Item>{2}</Pagination.Item>
+                  <Pagination.Item>{3}</Pagination.Item>
+                  <Pagination.Item>{4}</Pagination.Item>
+                  <Pagination.Next />
+                </Pagination>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

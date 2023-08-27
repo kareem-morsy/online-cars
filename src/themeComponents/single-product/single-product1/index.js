@@ -1,9 +1,10 @@
 import style from "./styles/ProductDetails.module.scss";
 import "swiper/css/thumbs";
 import ProductImages from "./ProductImages";
-import ProductTabs from "./ProductTabs";
-import ProdutsRelated from "./ProdutsRelated";
 import ProductCardInfo from "./ProductCardInfo";
+import AccodionSection from "./AccodionSection";
+import Link from "next/link";
+import ProdutsRelated from './ProdutsRelated';
 const ProductDetails = () => {
   return (
     <>
@@ -17,12 +18,14 @@ const ProductDetails = () => {
 
               <div className="col-lg-6">
                 <ProductCardInfo />
+                <AccodionSection />
               </div>
             </div>
           </div>
 
-          <ProductTabs />
-          <ProdutsRelated />
+          <div className="related">
+            <ProdutsRelated/>
+          </div>
         </div>
       </section>
     </>

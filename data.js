@@ -186,47 +186,121 @@ export const brandSection = [
 ];
 
 //variable for categories
-export const categories = 
-  [
-    {
-      id: 1,
-      image: require("./src/assets/images/category1.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 2,
-      image: require("./src/assets/images/category2.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 3,
-      image: require("./src/assets/images/category3.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 4,
-      image: require("./src/assets/images/category4.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 5,
-      image: require("./src/assets/images/category5.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 6,
-      image: require("./src/assets/images/category6.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 7,
-      image: require("./src/assets/images/category7.png"),
-      title: "مصباح ليد امامى"
-    },
-    {
-      id: 8,
-      image: require("./src/assets/images/category8.png"),
-      title: "مصباح ليد امامى"
-    }
-  
+export const categories = [
+  {
+    id: 1,
+    image: require("./src/assets/images/category1.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 2,
+    image: require("./src/assets/images/category2.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 3,
+    image: require("./src/assets/images/category3.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 4,
+    image: require("./src/assets/images/category4.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 5,
+    image: require("./src/assets/images/category5.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 6,
+    image: require("./src/assets/images/category6.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 7,
+    image: require("./src/assets/images/category7.png"),
+    title: "مصباح ليد امامى",
+  },
+  {
+    id: 8,
+    image: require("./src/assets/images/category8.png"),
+    title: "مصباح ليد امامى",
+  },
+];
+
+//variable for filter page
+export const filterPage = [
+  {
+    id: 1,
+    image: require("./src/assets/images/filter1.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 2,
+    image: require("./src/assets/images/filter2.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 3,
+    image: require("./src/assets/images/filter3.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 4,
+    image: require("./src/assets/images/filter4.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 5,
+    image: require("./src/assets/images/filter5.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 6,
+    image: require("./src/assets/images/filter6.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 7,
+    image: require("./src/assets/images/filter7.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 8,
+    image: require("./src/assets/images/filter8.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 9,
+    image: require("./src/assets/images/filter9.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 10,
+    image: require("./src/assets/images/filter10.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 11,
+    image: require("./src/assets/images/filter11.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 12,
+    image: require("./src/assets/images/filter12.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
 ];

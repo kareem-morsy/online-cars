@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import Image from "next/future/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Thumbs } from "swiper";
-
-import glass1 from "./assets/images/glass1.png";
-import glass2 from "./assets/images/glass2.png";
-import glass3 from "./assets/images/glass3.png";
-import glass4 from "./assets/images/glass4.png";
-import glass5 from "./assets/images/glass5.png";
-
-
+import { FreeMode, Navigation, Thumbs } from "swiper";
+import product1 from "./assets/images/product1.png";
+import product2 from "./assets/images/product2.png";
+import product3 from "./assets/images/product3.png";
 
 const ProductImages = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -17,6 +12,91 @@ const ProductImages = () => {
   return (
     <div className="product-slider">
       <Swiper
+        style={{
+          "--swiper-navigation-color": "#fff",
+          "--swiper-pagination-color": "#fff",
+        }}
+        spaceBetween={10}
+        navigation={true}
+        thumbs={{ swiper: thumbsSwiper }}
+        modules={[FreeMode, Thumbs]}
+        className="main-swiper"
+      >
+        <SwiperSlide>
+          <div className="slide">
+            <div className="slide-img">
+              <Image src={product1} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="slide">
+            <div className="slide-img">
+              <Image src={product2} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="slide">
+            <div className="slide-img">
+              <Image src={product3} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="slide">
+            <div className="slide-img">
+              <Image src={product1} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+      <Swiper
+        onSwiper={setThumbsSwiper}
+        spaceBetween={10}
+        slidesPerView={4}
+        freeMode={true}
+        watchSlidesProgress={true}
+        modules={[FreeMode, Navigation, Thumbs]}
+        className="sub-swiper"
+      >
+        <SwiperSlide>
+          <div className="sub-slide">
+            <div className="sub-slide-img">
+              <Image src={product1} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="sub-slide">
+            <div className="sub-slide-img">
+              <Image src={product2} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="sub-slide">
+            <div className="sub-slide-img">
+              <Image src={product3} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="sub-slide">
+            <div className="sub-slide-img">
+              <Image src={product1} alt="product-img" />
+            </div>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
+      {/* <Swiper
         style={{
           "--swiper-navigation-color": "#fff",
           "--swiper-pagination-color": "#fff",
@@ -113,7 +193,7 @@ const ProductImages = () => {
             <Image src={glass5} alt="glass" />
           </div>
         </SwiperSlide>
-      </Swiper>
+      </Swiper> */}
     </div>
   );
 };
