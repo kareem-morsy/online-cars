@@ -1,39 +1,24 @@
-import React from 'react'
-import WishListCard from './WishListCard'
+import React from "react";
+import { Col } from "react-bootstrap";
+import { filterSection } from "../../../../data";
+import WishListCard from "./WishListCard";
 
 const WishList = () => {
   return (
     <>
-    <div className='wishlist-section'>
-        <div className='row'>
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-
-            <div className='col-xl-4 col-md-6 col-12'>
-                <WishListCard/>
-            </div>
-            
+      <div className="wishlist-section">
+        <div className="row">
+          {filterSection?.map((product, index) => {
+            return (
+              <Col xl={4} lg={4} md={12} key={index}>
+                <WishListCard product={product} />
+              </Col>
+            );
+          })}
         </div>
-    </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default WishList
+export default WishList;

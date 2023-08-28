@@ -1,11 +1,9 @@
-import React from "react";
 import { NextSeo } from "next-seo";
-import Header2 from "../../../src/themeComponents/headers/header2";
-import Features from "../../../src/themeComponents/features/features1";
-import BreadCramb from "../../../src/themeComponents/breadcrumbs/breadcrumbs1";
-import FooterSection from "../../../src/themeComponents/footers/footer1";
-import NewsLetter from "../../../src/themeComponents/news-letter/news-letter1";
-import SucessOrder from './../../../src/themeComponents/payment-status/payment-status1/index';
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "../../../src/themeComponents/headers/header1/index";
+import Footer from "../../../src/themeComponents/footers/footer1/index";
+import BreadCramb from "../../../src/themeComponents/breadcrumbs/breadcrumbs1/index";
+import SucessOrder from "../../../src/themeComponents/payment-status/payment-status1";
 
 const SuccessPayment = () => {
   return (
@@ -23,13 +21,10 @@ const SuccessPayment = () => {
           },
         ]}
       />
-
-      <Header2 />
-      <BreadCramb />
+      <Header />
+      <BreadCramb pageName={<FormattedMessage id="categories" />} />
       <SucessOrder/>
-      <NewsLetter />
-      <Features />
-      <FooterSection />
+      <Footer />
     </>
   );
 };

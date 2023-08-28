@@ -1,9 +1,9 @@
 import { NextSeo } from "next-seo";
-import Header2 from "../../src/themeComponents/headers/header2";
-import FooterSection from "../../src/themeComponents/footers/footer1";
-import BreadCramb from "../../src/themeComponents/breadcrumbs/breadcrumbs1";
-import CheckOut from "../../src/themeComponents/checkOut/checkOut1";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "./../../src/themeComponents/headers/header1/index";
+import Footer from "./../../src/themeComponents/footers/footer1/index";
+import BreadCramb from "./../../src/themeComponents/breadcrumbs/breadcrumbs1/index";
+import CheckOut from './../../src/themeComponents/checkout/checkout1/index';
 
 const CheckOutPage = () => {
   return (
@@ -22,10 +22,11 @@ const CheckOutPage = () => {
         ]}
       />
 
-      <Header2 />
-      <BreadCramb pageName={<FormattedMessage id="salla" />} />
+      <Header />
+      <BreadCramb pageName={<FormattedMessage id="categories" />} />
       <CheckOut />
-      <FooterSection />
+      <Footer />
+
     </>
   );
 };

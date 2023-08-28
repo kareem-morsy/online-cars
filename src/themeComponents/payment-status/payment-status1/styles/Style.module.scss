@@ -1,84 +1,72 @@
 .SucessOrder {
   :global {
-    margin: 150px 0px;
-
-    .SucessOrder-details {
-      width: 60%;
-      margin: 0px auto;
-      @media (max-width: 991px) {
-        width: 95%;
+    margin: 121px 0px 250px 0px;
+    .order-details {
+      h2 {
+        color: #1b3275;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 25px;
       }
-      .order-notification {
+      .order-details-row {
         display: flex;
-        width: 100%;
-        justify-content: center;
-        background-color: #f4f5f7;
-        border-radius: 5px;
-        align-items: center;
-        min-height: 120px;
-        gap: 45px;
-
-        .user-details {
-          p {
-            color: #2b0000;
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 15px;
-          }
-          h4 {
-            color: #9c0646;
-            font-size: 24px;
-            font-weight: 300;
-            margin-bottom: 15px;
-          }
-        }
-      }
-      .confirmation {
-        margin: 35px 0px;
-        p {
-          color: #2b0000;
-          font-size: 16px;
-          font-weight: 300;
-          margin-bottom: 10px;
-          [data-theme="dark"] & {
-            color: #fff;
-          }
-        }
+        margin-bottom: 16px;
 
         h5 {
-          color: #000;
-          font-size: 18px;
-          font-weight: 300;
-          [data-theme="dark"] & {
-            color: #fff;
+          color: #444;
+          font-size: 16px;
+          font-weight: 500;
+          span {
+            margin: 0px 5px;
           }
+        }
+
+        p {
+          color: #444;
+          font-size: 15px;
+          font-weight: 300;
+          margin: 0px 5px;
         }
       }
+    }
 
-      .success-order-info {
-        h4 {
-          color: #2b0000;
-          font-size: 21px;
-          font-weight: 600;
-          margin: 85px 0px 25px 0px;
-          [data-theme="dark"] & {
-            color: #fff;
+    .order-table {
+      margin-top: 65px;
+      table {
+        thead {
+          border-radius: 8px;
+          background: #f8f8f8;
+          th {
+            color: #444;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 21px 25px;
           }
         }
-        .order-info-details {
-          margin: 35px 0px;
-          h6 {
-            color: #9c0646;
-            font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 18px;
+
+        tbody {
+          tr:nth-child(1){
+            border-bottom: 1px solid #eee;
+          }
+          tr:nth-child(2){
+            border-bottom: 1px solid #eee;
+          }
+          td {
+            color: rgba(68, 68, 68, 0.8);
+            font-size: 16px;
+            font-weight: 400;
+            padding: 21px 25px;
           }
 
-          p {
-            color: #aaaaaa;
-            font-size: 16px;
-            font-weight: 300;
-            margin-bottom: 15px;
+          .td-title {
+            color: #444;
+            font-size: 14px;
+            font-weight: 500;
+          }
+
+          .td-subtotal {
+            border-radius: 8px;
+            background: #f8f8f8;
           }
         }
       }

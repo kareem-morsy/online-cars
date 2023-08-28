@@ -3,7 +3,10 @@
     margin: 100px 0px;
     .profile-indicators {
       width: 100%;
-      border-left: 1px solid rgba(170, 170, 170, 0.4);
+      border-radius: 20px;
+      border: 2px solid rgba(65, 88, 242, 0.1);
+      background: #fbfcff;
+      padding: 30px;
       [dir="ltr"] & {
         border-left: 0px solid transparent;
         border-right: 1px solid rgba(170, 170, 170, 0.4);
@@ -38,8 +41,14 @@
       }
       .tab-link {
         display: flex;
-        padding: 10px;
+        padding: 15px 0px;
         gap: 28px;
+        border-bottom: 1px solid #eaeaea;
+        h5 {
+          color: #000;
+          font-size: 18px;
+          font-weight: 300;
+        }
         svg {
           stroke: #aaaaaa !important;
           width: 25px;
@@ -57,6 +66,19 @@
             font-size: 14px;
           }
         }
+
+        &:hover {
+          h5 {
+            color: #4158f2;
+          }
+          svg {
+            stroke: #4158f2;
+          }
+        }
+      }
+
+      .log-tab {
+        border-bottom: none;
       }
     }
 
@@ -123,72 +145,35 @@
     }
 
     .account-info {
-      width: 100%;
-      min-height: 250px;
-      padding: 25px 15px;
-      border: 1px solid rgba(170, 170, 170, 0.4);
-      box-shadow: 0px 0px 5px rgba(170, 170, 170, 0.4);
-      border-radius: 5px;
-      [data-theme="dark"] & {
-        box-shadow: 0px 0px 2px rgba(170, 170, 170, 0.2);
+      border-radius: 20px;
+      border: 1px solid rgba(65, 88, 242, 0.1);
+      background: var(--fbfcff, #fbfcff);
+      min-height: 500px;
+      padding: 50px;
+      h2 {
+        color: #000;
+        font-size: 29px;
+        font-weight: 500;
+        margin-bottom: 45px;
       }
-
-      .log-in-out {
-        display: flex;
-        justify-content: space-between;
-        margin: 15px 0px 35px 0px;
-        h4 {
-          color: #000;
-          font-weight: 400;
-          span {
-            margin: 0px 5px;
-          }
-
-          [data-theme="dark"] & {
-            color: #fff;
-          }
-        }
-
-        button {
-          background-color: transparent;
-          border: 0px solid transparent;
-          [dir="ltr"] & {
-            font-size: 16px;
-            font-weight: 500;
-          }
-          [data-theme="dark"] & {
-            color: #fff;
-          }
-        }
-      }
-
       p {
-        color: #9a9a9a;
-      }
-
-      .stop-account {
-        display: flex;
-        justify-content: flex-end;
-        button {
-          min-width: 150px;
-          height: 45px;
-          background-color: #9c0646;
-          color: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 3px;
-          border: 0px solid transparent;
-          font-size: 12px;
-          margin: 45px 0px 15px 0px;
-          [dir="ltr"] & {
-            font-size: 14px;
-          }
+        color: #000;
+        font-size: 16px;
+        font-weight: 300;
+        .p-link {
+          color: #000 !important;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 0px 5px;
         }
       }
     }
 
     .edit-profile {
+      border-radius: 20px;
+      border: 1px solid rgba(65, 88, 242, 0.1);
+      background: #fbfcff;
+      padding: 50px;
       label {
         color: #212529;
         font-size: 14px;
@@ -214,7 +199,7 @@
 
             &:focus {
               box-shadow: 0px 0px 0px transparent !important;
-              border: 1px solid #9c0646;
+              border: 1px solid #4158f2;
             }
 
             [data-theme="dark"] & {
@@ -251,7 +236,7 @@
             position: absolute;
             top: -10px;
             left: -10px;
-            background-color: #9c0646;
+            background-color: #4158f2;
             color: #fff;
             border: 0px solid transparent;
             border-radius: 50%;
@@ -268,7 +253,7 @@
         button {
           min-width: 150px;
           height: 45px;
-          background-color: #9c0646;
+          background-color: #4158f2;
           color: #fff;
           display: flex;
           justify-content: center;
@@ -283,9 +268,16 @@
 
     .order-section {
       table {
+        border-radius: 20px;
+        border: 1px solid rgba(65, 88, 242, 0.1);
+        background: #fbfcff;
         thead {
+          border-radius: 20px 20px 0px 0px !important;
+          border: 1px solid rgba(65, 88, 242, 0.1);
+          background: #4158f2;
+
           th {
-            color: #3b352f;
+            color: #fff;
             font-size: 16px;
             font-weight: 300;
             padding: 35px 0px;
@@ -311,9 +303,9 @@
           td {
             padding: 35px 0px;
             color: #282828;
-            font-weight: 300;
-            font-size: 14px;
             text-align: center;
+            color: #000;
+            font-weight: 400;
             [data-theme="dark"] & {
               color: #fff;
             }
@@ -335,12 +327,17 @@
           }
 
           .show-order-btn {
-            background-color: #f4f5f7;
             padding: 15px 28px;
             color: #2b0000;
             font-weight: 300;
             border-radius: 3px;
             font-size: 12px;
+            border-radius: 10px;
+            background: #040414;
+            color: #fff;
+            font-weight: 400;
+            transition: all ease-in-out 0.2s;
+
             [data-theme="dark"] & {
               color: #000;
             }
@@ -352,162 +349,161 @@
             @media (max-width: 767px) {
               min-width: 160px;
             }
+
+            &:hover {
+              background-color: #4158f2;
+            }
           }
         }
       }
     }
 
     .wishlist-section {
-      .wishlist-card {
-        height: 490px;
+      .main-card {
+        background-color: #f6f6f6;
+        border: 10px;
+        padding: 21px;
+        margin-bottom: 30px;
         width: 100%;
-        margin: 35px 0px;
-        .wishlist-card-img {
+        min-height: 500px;
+        border-radius: 10px;
+
+        .main-card-img {
           position: relative;
-          height: 380px;
           width: 100%;
-          border-radius: 3px 3px 0px 0px;
+          height: 80%;
+
           img {
             width: 100%;
             height: 100%;
-            border-radius: 3px 3px 0px 0px;
+            object-fit: contain;
           }
 
-          .overlay-button {
+          .buttons-overlay {
             position: absolute;
-            top: 75px;
             opacity: 0;
+            bottom: 10px;
             display: flex;
-            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            flex-direction: row;
             z-index: 1;
             transition: all 0.3s ease-in-out;
-            // width: 100%;
-            padding-right: 10px;
+            gap: 15px;
+            z-index: 9;
 
             button {
-              width: 45px;
-              height: 45px;
+              border: 0px solid transparent;
               background-color: #fff;
               border-radius: 50%;
+              width: 35px;
+              height: 35px;
               display: flex;
               justify-content: center;
               align-items: center;
-              border: 0px solid #fff;
-              margin: 8px 0px;
+              opacity: 0;
+              transition: 0.3s;
+              border-radius: 10px;
+              &:nth-of-type(2) {
+                transition-delay: 0.1s;
+              }
+              &:nth-of-type(3) {
+                transition-delay: 0.2s;
+              }
+              &:nth-of-type(4) {
+                transition-delay: 0.3s;
+              }
 
               img {
                 width: 21px;
                 height: 21px;
               }
 
+              svg {
+                transition: 0.3s;
+                filter: brightness(1) invert(0);
+              }
+
               &:hover {
-                background-color: #9c0646;
+                background-color: #4158f2;
                 color: #fff;
+                svg {
+                  filter: brightness(0) invert(1);
+                }
               }
             }
           }
-
           .overlay-link {
             position: absolute;
-            top: 0px;
-            right: 0px;
-            background-color: transparent;
+            inset: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
-          }
-
-          .wishlist-card-pane {
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            right: 21px;
-            top: 30px;
-            .new-pane {
-              height: 25px;
-              width: 45px;
-              background-color: #9c0646;
-
-              color: #fff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 21px;
-              font-size: 12px;
-            }
-
-            .discount-pane {
-              height: 25px;
-              width: 38px;
-              background-color: #2d9c06;
-
-              color: #fff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 21px;
-              font-size: 12px;
-              margin: 0px 10px;
-            }
-          }
-
-          .delete-bttn {
-            position: absolute;
-            left: 10px;
-            top: 15px;
-            width: 35px;
-            height: 35px;
-            border-radius: 3px;
-            border: 0px solid transparent;
           }
         }
 
-        .wishlist-card-content {
-          display: flex;
-          width: 100%;
-          height: 110px;
-          flex-direction: column;
-          align-items: center;
+        .main-card-title {
+          color: #040414;
+          font-size: 18px;
+          font-weight: 400;
+          text-align: center;
+          margin: 30px auto 15px auto;
+          display: block;
+        }
+
+        .main-card-desc {
+          color: rgba(0, 0, 0, 0.5);
+          text-align: center;
+          font-size: 16px;
+          font-weight: 300;
           margin: 15px auto;
+        }
 
-          .wishlist-card-title {
-            font-size: 15px;
-            color: #2b0000;
+        .stars {
+          margin: 15px 0px;
+          text-align: center;
+        }
+
+        .main-card-price {
+          display: flex;
+          gap: 15px;
+          margin: 15px auto;
+          justify-content: center;
+
+          .current-price {
+            color: #040414;
+            text-align: right;
+            font-size: 16px;
             font-weight: 400;
-            margin-top: 15px;
-            [data-theme="dark"] & {
-              color: #fff;
-            }
           }
 
-          .stars {
-            margin: 15px auto;
-          }
-
-          .wishlist-card-price {
-            .current-price {
-              color: #2b0000;
-              margin: 0px 10px;
-              [data-theme="dark"] & {
-                color: #fff;
-              }
-            }
-
-            .past-price {
-              color: rgba(43, 0, 0, 0.5);
-              margin: 0px 10px;
-              text-decoration: line-through;
-              [data-theme="dark"] & {
-                color: #9c0646;
-              }
-            }
+          .past-price {
+            color: rgba(32, 32, 32, 0.3);
+            font-size: 14px;
+            font-weight: 400;
+            text-decoration: line-through;
           }
         }
 
         &:hover {
-          .overlay-button {
+          .buttons-overlay {
             opacity: 1;
+            button {
+              opacity: 1;
+            }
           }
+        }
+      }
+
+      .delete-bttn {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 35px;
+        height: 35px;
+        border-radius: 3px;
+        border: 0px solid transparent;
+        svg{
+          filter : brightness(0) invert(.45);
         }
       }
     }
@@ -520,7 +516,7 @@
         margin-bottom: 35px;
 
         h5 {
-          color: #9c0646;
+          color: #4158F2;
           font-size: 16px;
           font-weight: 300;
           margin-bottom: 35px;
@@ -531,7 +527,7 @@
           gap: 25px;
           margin: 21px 0px;
           .card-label {
-            color: #2b0000;
+            color: #4158F2;
             font-size: 15px;
             font-weight: 300;
             [data-theme="dark"] & {
@@ -550,7 +546,7 @@
           gap: 35px;
           margin: 50px 0px 5px 0px;
           a {
-            color: #2b0000;
+            color: #4158F2;
             font-size: 16px;
             font-weight: 300;
             text-decoration: underline;
@@ -560,7 +556,7 @@
           }
 
           button {
-            color: #9c0646;
+            color: #2b0000;
             font-size: 16px;
             font-weight: 300;
             border: 0px solid transparent;
@@ -592,18 +588,20 @@
         margin-bottom: 35px;
         .compare-img {
           width: 100%;
-          height: 350px;
           display: flex;
           justify-content: center;
           align-items: center;
           border: 1px solid #eeeeee;
           .compare-img-link {
             width: 100%;
-            height: 100%;
+            position: relative;
+            overflow : hidden; 
+            padding-top: 88%;
             img {
               width: 100%;
               height: 100%;
-              display: inline-block;
+              position : absolute;
+              inset: 0;
             }
           }
         }
@@ -623,7 +621,7 @@
             justify-content: center;
             align-items: center;
             h4 {
-              color: #9c0646;
+              color: #4158F2;
               font-weight: 600;
               font-size: 16px;
             }
@@ -642,7 +640,7 @@
           }
 
           .current-price {
-            color: #9c0646;
+            color: #4158F2;
             font-size: 17px;
           }
 
@@ -900,7 +898,6 @@
             color: #fff;
             font-size: 13px;
             font-weight: 300;
-            
           }
         }
       }
@@ -920,7 +917,6 @@
             color: #fff;
             font-size: 13px;
             font-weight: 300;
-            
           }
         }
       }
@@ -935,12 +931,11 @@
         }
         [data-theme="dark"] & {
           background-color: #2c3034;
-          
+
           &::placeholder {
             color: #fff;
             font-size: 13px;
             font-weight: 300;
-            
           }
         }
       }

@@ -1,12 +1,9 @@
 import { NextSeo } from "next-seo";
-// import Header2 from "../src/themeComponents/headers/header2";
-import Features from "../src/themeComponents/features/features1";
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "./../src/themeComponents/headers/header1/index";
+import Footer from "./../src/themeComponents/footers/footer1/index";
+import BreadCramb from "./../src/themeComponents/breadcrumbs/breadcrumbs1/index";
 import ProfileSection from "../src/themeComponents/profile/profile1";
-import FooterSection from "../src/themeComponents/footers/footer1";
-import BreadCramb from "../src/themeComponents/breadcrumbs/breadcrumbs1";
-import NewsLetter from "../src/themeComponents/news-letter/news-letter1";
-import { FormattedMessage } from "react-intl";
-
 
 const Profile = () => {
   return (
@@ -25,12 +22,10 @@ const Profile = () => {
         ]}
       />
 
-      {/* <Header2 />
-      <BreadCramb pageName={<FormattedMessage id="controlPanel" />}/>
+      <Header />
+      <BreadCramb pageName={<FormattedMessage id="categories" />} />
       <ProfileSection/>
-      <NewsLetter/>
-      <Features />
-      <FooterSection/> */}
+      <Footer />
     </>
   );
 };

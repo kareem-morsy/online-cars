@@ -12,10 +12,18 @@ const SallaTable = () => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col"><FormattedMessage id="product"/></th>
-              <th scope="col"><FormattedMessage id="price"/></th>
-              <th scope="col"><FormattedMessage id="quantity"/></th>
-              <th scope="col"><FormattedMessage id="total"/></th>
+              <th scope="col">
+                <FormattedMessage id="product" />
+              </th>
+              <th scope="col">
+                <FormattedMessage id="price" />
+              </th>
+              <th scope="col">
+                <FormattedMessage id="quantity" />
+              </th>
+              <th scope="col">
+                <FormattedMessage id="total" />
+              </th>
               <th scope="col"></th>
             </tr>
           </thead>
@@ -27,17 +35,21 @@ const SallaTable = () => {
                     <Image src={product1} alt="product-img" />
                   </div>
                   <div className="cart-product-name">
-                    <h5>نظارة حريمى حديثة</h5>
-                    <p>ازرق</p>
+                    <h5>تيل فرامل</h5>
+                    <p>يابانى</p>
                   </div>
                 </div>
               </td>
-              <td>55 ر.س</td>
+              <td className="salla-price">55 ر.س</td>
               <td>
                 <div className="Salla-count">
-                  <button>+</button>
-                  <span>1</span>
-                  <button>-</button>
+                  <input
+                    type="number"
+                    className="form-control"
+                    name="quantity"
+                    min="1"
+                    max="100"
+                  />
                 </div>
               </td>
               <td>10 ر.س</td>
@@ -55,17 +67,22 @@ const SallaTable = () => {
                     <Image src={product2} alt="product-img" />
                   </div>
                   <div className="cart-product-name">
-                    <h5>نظارة حريمى حديثة</h5>
-                    <p>ازرق</p>
+                    <h5>كوتش ميشلان</h5>
+                    <p>مصرى</p>
                   </div>
                 </div>
               </td>
-              <td>55 ر.س</td>
+              <td className="salla-price">55 ر.س</td>
               <td>
                 <div className="Salla-count">
-                  <button>+</button>
-                  <span>2</span>
-                  <button>-</button>
+                  <input
+                    type="number"
+                    className="form-control"
+                    name="quantity"
+                    min="1"
+                    max="100"
+                    id="quantity"
+                  />
                 </div>
               </td>
               <td>10 ر.س</td>
@@ -83,17 +100,21 @@ const SallaTable = () => {
                     <Image src={product3} alt="product-img" />
                   </div>
                   <div className="cart-product-name">
-                    <h5>نظارة حريمى حديثة</h5>
-                    <p>ازرق</p>
+                    <h5>مارش هيوندانى اصلى</h5>
+                    <p>كورى</p>
                   </div>
                 </div>
               </td>
-              <td>55 ر.س</td>
+              <td className="salla-price">55 ر.س</td>
               <td>
                 <div className="Salla-count">
-                  <button>+</button>
-                  <span>1</span>
-                  <button>-</button>
+                  <input
+                    type="number"
+                    className="form-control"
+                    name="quantity"
+                    min="1"
+                    max="100"
+                  />
                 </div>
               </td>
               <td>10 ر.س</td>

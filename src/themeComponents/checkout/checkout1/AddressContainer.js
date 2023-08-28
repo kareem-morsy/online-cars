@@ -1,42 +1,49 @@
-import React from "react";
+import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import { FormattedMessage } from "react-intl";
+import Edit from "./assets/images/edit.svg";
+import Hint from "./assets/images/hint.svg";
 
 const AddressContainer = () => {
+  //modal details
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="address-container">
-        <div className="address-details active">
-          <h5>العنوان (1)</h5>
-          <p>السعودية / الرياض / شارع المحمدية عمارة 45 الطابق الثانى</p>
-          <Button
-            className="addrss-modal-bttn"
-            onClick={() => setModalShow(true)}
-          >
-            <FormattedMessage id="edit" />
-          </Button>
+        <div className="address-info">
+          <h2>معلومات التوصيل</h2>
+
+          <button onClick={handleShow}>اضافة عنوان جديد</button>
         </div>
 
         <div className="address-details">
-          <h5>العنوان (2)</h5>
-          <p>السعودية / الرياض / شارع المحمدية عمارة 45 الطابق الثانى</p>
-          <Button
-            className="addrss-modal-bttn"
-            onClick={() => setModalShow(true)}
-          >
-            <FormattedMessage id="edit" />
-          </Button>
+          <div className="details-info">
+            <h4>المحلة الكبري</h4>
+            <p>شارع شكرى الكواتلى بجوار الصياد للحلويات</p>
+          </div>
+
+          <div className="detailsModal">
+            <button onClick={handleShow}>
+              <span>
+                <Edit />
+              </span>
+              تغيير
+            </button>
+          </div>
         </div>
 
-        <div className="address-details">
-          <h5>العنوان (3)</h5>
-          <p>السعودية / الرياض / شارع المحمدية عمارة 45 الطابق الثانى</p>
-          <Button
-            className="addrss-modal-bttn"
-            onClick={() => setModalShow(true)}
-          >
-            <FormattedMessage id="edit" />
-          </Button>
+        <div className="userInfo">
+          <h4>محمود عامر</h4>
+          <span>20 127*******76</span>
+        </div>
+
+        <div className="hint">
+          <span>
+            <Hint />
+          </span>
+          <p>قم بتضمين نفس العنوان في الفاتورة</p>
         </div>
       </div>
     </>

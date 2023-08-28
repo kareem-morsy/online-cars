@@ -1,70 +1,108 @@
 import React from "react";
-import notification from "./assets/notification.png"
+import notification from "./assets/notification.png";
 import style from "./styles/Style.module.scss";
 import Image from "next/future/image";
 import { FormattedMessage } from "react-intl";
-
 
 const SucessOrder = () => {
   return (
     <>
       <section className={style.SucessOrder}>
         <div className="container">
-          <div className="SucessOrder-details">
-            <div className="order-notification">
-              <div className="order-notification-img">
-                <Image src={notification} alt="img" />
-              </div>
-
-              <div className="user-details">
-                <p>
-                  <FormattedMessage id="orderID" /> : 1542542
-                </p>
-                <h4>شكرا لك محمد ابراهيم</h4>
-              </div>
+          <div className="order-details">
+            <h2>شكرًا لك. تم استلام طلبك.</h2>
+            <div className="order-details-row">
+              <h5>منتج رقم :</h5>
+              <p>3394</p>
             </div>
 
-            <div className="confirmation">
-              <p>تم تاكيد طلبك بنجاح </p>
-              <h5>ستقوم بالدفع عند استلام طلبك</h5>
+            <div className="order-details-row">
+              <h5>
+                التاريخ
+                <span>:</span>
+              </h5>
+              <p> 2 أغسطس 2022</p>
             </div>
 
-            <div className="success-order-info">
-              <h4>
-                <FormattedMessage id="orderDetails" />
-              </h4>
-              <div className="order-info-details">
-                <h6>
-                  <FormattedMessage id="ContactInfo" />
-                </h6>
-                <p>mohamedmail@gmail.com</p>
-              </div>
-
-              <div className="order-info-details">
-                <h6>
-                  <FormattedMessage id="payInfo" />
-                </h6>
-                <p>دفع عند الاستلام ك 165 رس</p>
-              </div>
-
-              <div className="order-info-details">
-                <h6>
-                  <FormattedMessage id="deliveryAddres" />
-                </h6>
-                <p>محمد ابراهيم محمد</p>
-                <p>العنوان بالتفصيل يكتب هنا</p>
-                <p>المحلة الكبرى</p>
-                <p>12548</p>
-                <p>01002564566</p>
-              </div>
-
-              <div className="order-info-details">
-                <h6>
-                  <FormattedMessage id="deliveryInfo" />
-                </h6>
-                <p>توصيل عادى فى غضون 4 الى 5 ايام عمل </p>
-              </div>
+            <div className="order-details-row">
+              <h5>
+                بريد إلكتروني
+                <span>:</span>
+              </h5>
+              <p> mohamed@gmail.com</p>
             </div>
+
+            <div className="order-details-row">
+              <h5>
+                المجموع
+                <span>:</span>{" "}
+              </h5>
+              <p>30.00 ريال</p>
+            </div>
+
+            <div className="order-details-row">
+              <h5>
+                طريقة الدفع
+                <span>:</span>
+              </h5>
+              <p>تحويل مصرفي مباشر</p>
+            </div>
+          </div>
+
+          <div className="order-table">
+            <table className="table ">
+              <thead>
+                <tr>
+                  <th>المنتج</th>
+                  <th>العدد</th>
+                  <th>السعر</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td className="td-title">تيل فرامل</td>
+                  <td>2</td>
+                  <td>10 ر.س</td>
+                </tr>
+
+                <tr>
+                  <td className="td-title">تيل فرامل</td>
+                  <td>2</td>
+                  <td>10 ر.س</td>
+                </tr>
+
+                <tr>
+                  <td className="td-title">تيل فرامل</td>
+                  <td>2</td>
+                  <td>10 ر.س</td>
+                </tr>
+
+                <tr className="td-subtotal">
+                  <td colSpan="2" className="td-title">المجموع الفرعى</td>
+
+                  <td>30 ر.س</td>
+                </tr>
+
+                <tr>
+                  <td colSpan="2" className="td-title">التوصيل</td>
+
+                  <td>5 ر.س</td>
+                </tr>
+
+                <tr className="td-subtotal">
+                  <td colSpan="2" className="td-title">الاجمالى</td>
+
+                  <td>35 ر.س</td>
+                </tr>
+
+                <tr>
+                  <td colSpan="2" className="td-title">ملاحظات</td>
+
+                  <td>لا توجد ملاحظات</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

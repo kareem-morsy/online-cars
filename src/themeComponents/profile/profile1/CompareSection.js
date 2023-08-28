@@ -1,6 +1,6 @@
 import Image from "next/future/image";
-import glass1 from "./assets/images/glass1.png";
-import glass2 from "./assets/images/glass2.png";
+import product1 from "./assets/images/product1.png";
+import product2 from "./assets/images/product2.png";
 import Link from "next/link";
 import Close from './assets/images/close.svg'
 const CompareSection = () => {
@@ -17,7 +17,7 @@ const CompareSection = () => {
               <div className="compare-img">
                 <Link href="/">
                   <a className="compare-img-link">
-                    <Image src={glass1} alt="product-img" />
+                    <Image src={product1} alt="product-img" />
                   </a>
                 </Link>
               </div>
@@ -25,7 +25,7 @@ const CompareSection = () => {
               <div className="compare-info">
                 <Link href="/">
                   <a className="compare-card-title">
-                    <h4>نظارة شمس</h4>
+                    <h4>موتور سيارة</h4>
                     
                   </a>
                 </Link>
@@ -62,7 +62,7 @@ const CompareSection = () => {
               <div className="compare-img">
                 <Link href="/">
                   <a className="compare-img-link">
-                    <Image src={glass2} alt="product-img" />
+                    <Image src={product2} alt="product-img" />
                   </a>
                 </Link>
               </div>
@@ -70,7 +70,7 @@ const CompareSection = () => {
               <div className="compare-info">
                 <Link href="/">
                   <a className="compare-card-title">
-                    <h4>نظارة شمس</h4>
+                    <h4>موتور سيارة</h4>
                     
                   </a>
                 </Link>

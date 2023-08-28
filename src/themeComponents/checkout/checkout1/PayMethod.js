@@ -1,62 +1,88 @@
-import LeftArrow from "./assets/images/left-arrow.svg";
-import Link from "next/link";
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import AdressModal from "./AdressModal";
-import RightArrow from "./assets/images/rightArrow.svg";
-import AddressContainer from "./AddressContainer";
-import PayMethodCard from "./payMethodCard";
-import { FormattedMessage } from "react-intl";
 
+import Form from "react-bootstrap/Form";
+import Visa from "./assets/images/visa.svg";
+import Truck from "./assets/images/truck.svg";
+import Money from "./assets/images/money.svg";
+import Credit from "./assets/images/creditcard.svg";
 
 const PayMethod = () => {
-  const [modalShow, setModalShow] = useState(false);
-
   return (
     <>
-      <div className="pay-steps">
-        <div className="steps-header">
-          <div className="steps-breadcramb">
-            <ul className="bread-links">
-              <li>
-                <Link href="/">
-                  <a><FormattedMessage id="home"/></a>
-                </Link>
-              </li>
+      <div className="paymthod-section">
+        <h2>الدفع</h2>
 
-              <li>
-                <span>
-                  <LeftArrow fill="#8E8E8E" />
-                </span>
-              </li>
+        <div classname="pay-form">
+          <form>
+            <div className="radio-row">
+              <div className="form-group">
+                <input type="radio" className="form-check" name="radio1" />
+                <label>
+                  <span>
+                    <Visa />
+                  </span>
+                  <span>الدفع بالفيزا</span>
+                </label>
+              </div>
 
-              <li><FormattedMessage  id="prdoucts"/></li>
-            </ul>
-          </div>
+              <div className="form-group">
+                <input type="radio" className="form-check" name="radio1"/>
+                <label>
+                  <span>
+                    <Truck />
+                  </span>
+                  <span>الدفع عند الاستلام</span>
+                </label>
+              </div>
 
-          <Button
-            className="addrss-modal-bttn"
-            onClick={() => setModalShow(true)}
-          >
-            <FormattedMessage id="addAddress"/>
-          </Button>
-        </div>
+              <div className="form-group">
+                <input type="radio" className="form-check" name="radio1"/>
+                <label>
+                  <span>
+                    <Money />
+                  </span>
+                  <span>الدفع بالفيزا</span>
+                </label>
+              </div>
+            </div>
 
-        <AddressContainer />
-        <PayMethodCard/>
-
-        <div className="pay-bttn">
-          <Link href="/cart">
-            <a className="back-link">
-              <RightArrow />
-              <FormattedMessage id="backToCart"/>
-            </a>
-          </Link>
-          <button><FormattedMessage id="payNow"/></button>
+            <div className="form-content">
+              <div className="row">
+                <div className="col-md-6 col-12">
+                  <div className="form-group">
+                    <label>الاسم على البطاقة</label>
+                    <input
+                      type="text"
+                      placeholder="محمد السيد ابراهيم"
+                      className="form-control"
+                    />
+                  </div>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div className="form-group">
+                    <label>رقم الكارت</label>
+                    <input type="text" className="form-control" />
+                    <span>
+                      <Credit />
+                    </span>
+                  </div>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div className="form-group">
+                    <label>تاريخ الانتهاء</label>
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
+                <div className="col-md-6 col-12">
+                  <div className="form-group">
+                    <label>رقم ال CVV</label>
+                    <input type="text" className="form-control" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
-
-      <AdressModal show={modalShow} onHide={() => setModalShow(false)} />
     </>
   );
 };

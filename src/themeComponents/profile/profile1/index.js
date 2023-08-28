@@ -117,7 +117,7 @@ const ProfileSection = () => {
                     className="nav-link"
                     onClick={() => console.log("out")}
                   >
-                    <div className="tab-link">
+                    <div className="tab-link log-tab">
                       <Logout width={35} height={35} />
                       <h5>
                         <FormattedMessage id="logout" />

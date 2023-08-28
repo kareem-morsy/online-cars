@@ -1,13 +1,26 @@
-import style from "./styles/CheckOut.module.scss";
+import style from "./styles/Style.module.scss";
 import PayMethod from "./PayMethod";
-import ProductsPay from "./ProductsPay";
+import AddressContainer from "./AddressContainer";
+import Summary from "./Summary";
+import TotalPay from "./TotalPay";
 
 const CheckOut = () => {
   return (
     <>
-      <div className={style.CheckSection}>
-        <PayMethod />
-        <ProductsPay />
+      <div className={style.Checkout}>
+        <div className="container">
+          <div className="row">
+            <div className="col-md-7 col-12">
+              <AddressContainer />
+              <PayMethod/>
+            </div>
+
+            <div className="col-md-5 col-12">
+              <Summary/>
+              <TotalPay/>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   );
