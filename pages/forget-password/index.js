@@ -1,9 +1,8 @@
-import React from "react";
 import { NextSeo } from "next-seo";
-import Header2 from "../../src/themeComponents/headers/header2";
-import ForgetPass from "../../src/themeComponents/forget-password/forget-password1";
-import FooterSection from "../../src/themeComponents/footers/footer1";
-
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "./../../src/themeComponents/headers/header1/index";
+import Footer from "./../../src/themeComponents/footers/footer1/index";
+import ForgetPass from './../../src/themeComponents/forget-password/forget-password1/index';
 
 const ForgetPassword = () => {
   return (
@@ -21,9 +20,10 @@ const ForgetPassword = () => {
           },
         ]}
       />
-      <Header2 />
-      <ForgetPass />
-      <FooterSection />
+
+      <Header />
+      <ForgetPass/>
+      <Footer />
     </>
   );
 };

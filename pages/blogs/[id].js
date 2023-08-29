@@ -1,13 +1,10 @@
-import React from "react";
 import { NextSeo } from "next-seo";
-import Header2 from "../../src/themeComponents/headers/header2";
-import BreadCramb from "../../src/themeComponents/breadcrumbs/breadcrumbs1";
-import Features from "../../src/themeComponents/features/features1";
-import FooterSection from "../../src/themeComponents/footers/footer1";
-import SingleBlog from "../../src/themeComponents/single-blog/single-blog1";
-import NewsLetter from "../../src/themeComponents/news-letter/news-letter1";
-import { FormattedMessage } from 'react-intl';
-
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "./../../src/themeComponents/headers/header1/index";
+import Footer from "./../../src/themeComponents/footers/footer1/index";
+import BreadCramb from "./../../src/themeComponents/breadcrumbs/breadcrumbs1/index";
+import BlogsComponent from "./../../src/themeComponents/blogs/blogs1/index";
+import SingleBlog from './../../src/themeComponents/single-blog/single-blog1/index';
 
 const Blog = () => {
   return (
@@ -26,12 +23,10 @@ const Blog = () => {
         ]}
       />
 
-      <Header2 />
-      <BreadCramb pageName={<FormattedMessage id="blog"/>}/>
-      <SingleBlog />
-      <NewsLetter/>
-      <Features />
-      <FooterSection />
+      <Header />
+      <BreadCramb pageName={<FormattedMessage id="categories" />} />
+      <SingleBlog/>
+      <Footer />
     </>
   );
 };

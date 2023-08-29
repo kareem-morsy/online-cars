@@ -1,4 +1,3 @@
-import discount1 from "./assets/images/discount1.png";
 import discount2 from "./assets/images/discount2.png";
 import newblog1 from "./assets/images/newblog1.png";
 import newblog2 from "./assets/images/newblog2.png";
@@ -14,12 +13,6 @@ const BlogSidebar = () => {
   return (
     <>
       <div className="blog-sidebar">
-        <Link href="/">
-          <a className="discount-img">
-            <Image src={discount1} alt="discount" />
-          </a>
-        </Link>
-
         <div className="blog-search">
           <h4>
             <FormattedMessage id="search" />
@@ -50,11 +43,11 @@ const BlogSidebar = () => {
                 <Image src={newblog1} alt="blog-img" />
               </div>
               <div className="new-blog-details">
-                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
                 <p>
                   <Calendar />
                   May 20, 2022
                 </p>
+                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
               </div>
             </a>
           </Link>
@@ -65,11 +58,11 @@ const BlogSidebar = () => {
                 <Image src={newblog2} alt="blog-img" />
               </div>
               <div className="new-blog-details">
-                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
                 <p>
                   <Calendar />
                   May 20, 2022
                 </p>
+                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
               </div>
             </a>
           </Link>
@@ -80,14 +73,36 @@ const BlogSidebar = () => {
                 <Image src={newblog3} alt="blog-img" />
               </div>
               <div className="new-blog-details">
-                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
                 <p>
                   <Calendar />
                   May 20, 2022
                 </p>
+                <h5>عنوان المقال يكتب هنا بشكل كامل</h5>
               </div>
             </a>
           </Link>
+        </div>
+
+        <div className="classification">
+          <h4>التصنيفات</h4>
+          <div className="classification-row">
+            <h5>الانارة</h5>
+            <span>25</span>
+          </div>
+          <div className="classification-row">
+            <h5>اجزاء التعليق</h5>
+            <span>61</span>
+          </div>
+
+          <div className="classification-row">
+            <h5>جسم السيارة</h5>
+            <span>14</span>
+          </div>
+
+          <div className="classification-row">
+            <h5>الاجزاء الداخلية</h5>
+            <span>9</span>
+          </div>
         </div>
 
         <div className="blogs-keywords">
@@ -95,80 +110,35 @@ const BlogSidebar = () => {
             <FormattedMessage id="keywords" />
           </h4>
 
-          <div className="keyword-row">
+          <div className="keywords-collection">
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">انارة</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">عفشة</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة</a>
-            </Link>
-          </div>
-
-          <div className="keyword-row">
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">هيكل سيارة</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">تلميع السيارة</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة</a>
-            </Link>
-          </div>
-
-          <div className="keyword-row">
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">شمعات الاحتراق</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">حامل اكواب</a>
             </Link>
 
             <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة</a>
-            </Link>
-          </div>
-
-          <div className="keyword-row">
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
+              <a className="keyword-element">منظف تابلوه</a>
             </Link>
 
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
-            </Link>
-
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة</a>
-            </Link>
-          </div>
-
-          <div className="keyword-row">
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
-            </Link>
-
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
-            </Link>
-          </div>
-
-          <div className="keyword-row">
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
-            </Link>
-
-            <Link href="/blogs-categories">
-              <a className="keyword-element">كلمة دلالية</a>
-            </Link>
           </div>
         </div>
 

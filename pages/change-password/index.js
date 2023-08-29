@@ -1,8 +1,9 @@
-import React from "react";
 import { NextSeo } from "next-seo";
-import Header2 from "../../src/themeComponents/headers/header2";
-import ChangePass from "../../src/themeComponents/changePass/changePass1";
-import FooterSection from "../../src/themeComponents/footers/footer1";
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from './../../src/themeComponents/headers/header1/index';
+import Footer from './../../src/themeComponents/footers/footer1/index';
+import BreadCramb from './../../src/themeComponents/breadcrumbs/breadcrumbs1/index';
+import ChangePass from './../../src/themeComponents/changePass/changePass1/index';
 
 
 const ChangePassword = () => {
@@ -21,9 +22,10 @@ const ChangePassword = () => {
           },
         ]}
       />
-      <Header2 />
+
+      <Header/>
       <ChangePass/>
-      <FooterSection />
+      <Footer/>
     </>
   );
 };

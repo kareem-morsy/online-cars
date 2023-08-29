@@ -12,6 +12,29 @@ const ContactDetails = () => {
           <div className="col-lg-4">
             <div className="contact-details-card">
               <div className="card-icon">
+                <Call />
+              </div>
+              <div className="card-content">
+                <h5>
+                  <FormattedMessage id="phone" /> :
+                </h5>
+                
+                <div className="card-links">
+                  <Link href="tel:996 26589 068">
+                    <a>996 26589 068</a>
+                  </Link>
+
+                  <Link href="tel:996 26589 068">
+                    <a>996 26589 068</a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-lg-4">
+            <div className="contact-details-card middle-card">
+              <div className="card-icon">
                 <Location />
               </div>
               <div className="card-content">
@@ -29,38 +52,12 @@ const ContactDetails = () => {
           <div className="col-lg-4">
             <div className="contact-details-card">
               <div className="card-icon">
-                <Call />
-              </div>
-              <div className="card-content">
-                <h5>
-                  <FormattedMessage id="phone" /> :
-                </h5>
-                <p>جميع ايام الاسبوع من 8:00 صباحا حتى 9:00 مساءا</p>
-                <div className="card-links">
-                  <Link href="tel:996 26589 068">
-                    <a>996 26589 068</a>
-                  </Link>
-
-                  <span>/</span>
-
-                  <Link href="tel:996 26589 068">
-                    <a>996 26589 068</a>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-lg-4">
-            <div className="contact-details-card">
-              <div className="card-icon">
                 <Sms />
               </div>
               <div className="card-content">
                 <h5>
                   <FormattedMessage id="email" /> :
                 </h5>
-                <p>تحتاج الى مساعدة لاتتردد بالتواصل</p>
                 <div className="card-links">
                   <Link href="/">
                     <a>example@example.com</a>

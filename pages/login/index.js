@@ -1,8 +1,8 @@
-import React from "react";
 import { NextSeo } from "next-seo";
-import Header2 from "../../src/themeComponents/headers/header2";
-import LoginForm from "../../src/themeComponents/login/login1";
-import FooterSection from "../../src/themeComponents/footers/footer1";
+import { FormattedMessage, useIntl } from "react-intl";
+import Header from "./../../src/themeComponents/headers/header1/index";
+import Footer from "./../../src/themeComponents/footers/footer1/index";
+import LoginForm from './../../src/themeComponents/login/login1/index';
 
 const Login = () => {
   return (
@@ -20,9 +20,10 @@ const Login = () => {
           },
         ]}
       />
-      <Header2 />
+
+      <Header />
       <LoginForm />
-      <FooterSection />
+      <Footer />
     </>
   );
 };

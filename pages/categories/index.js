@@ -25,7 +25,6 @@ const CategoryPage = () => {
       <Header/>
       <BreadCramb pageName={<FormattedMessage id="categories" />} />
       <Categories/>
-      
       <Footer/>
     </>
   );

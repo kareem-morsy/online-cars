@@ -1,28 +1,50 @@
 .rulesSection {
   :global {
     margin: 100px 0px;
-    .rule-card {
-      margin: 30px 0px;
+
+    .rule-unit {
       h4 {
-        color: #2b0000;
-        font-size: 16px;
-        font-weight: 600;
-        margin-bottom: 15px;
-        [data-theme="dark"] & {
-          color: #fff;
-        }
+        color: #4158f2;
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 21px;
       }
 
       p {
-        color: rgba(43, 0, 0, 0.6);
-        font-size: 15px;
+        color: #818181;
+        font-size: 16px;
         font-weight: 300;
-        line-height: 2;
-        margin-bottom: 30px;
-        [data-theme="dark"] & {
-          color: #aaa;
+        line-height: 2.3;
+      }
+
+      .ul-desc {
+        color: #444;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0px;
+        margin-bottom: 21px;
+      }
+
+      ul {
+        list-style-type: disc;
+        padding: 0px 15px;
+        li {
+          color: #818181;
+          font-size: 16px;
+          font-weight: 300;
+          margin-bottom: 21px;
         }
       }
+
+      
+    }
+
+    .unit-line {
+      display: block;
+      background: #d9d9d9;
+      width: 90%;
+      height: 2px;
+      margin: 30px 0px;
     }
   }
 }

@@ -1,104 +1,288 @@
 import style from "./styles/AboutUs.module.scss";
-import aboutImg1 from "./assets/images/about1.png";
-import aboutImg2 from "./assets/images/about2.png";
-import mission from "./assets/images/mission.png";
+import introImg from "./assets/images/introImg.png";
 import Image from "next/future/image";
-import AboutSlider from "./AboutSlider";
 import { FormattedMessage } from "react-intl";
+import UL from "./assets/images/UL.svg";
+import banner from "./assets/images/banner.png";
+import about from "./assets/images/about.png";
+import textR from "./assets/images/textRight.png";
+import textL from "./assets/images/textLeft.png";
+import test1 from "./assets/images/test1.png";
+import test2 from "./assets/images/test2.png";
+import test3 from "./assets/images/test3.png";
+import Quotes from "./assets/images/Quotes.svg";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 
 const AboutUs = () => {
   return (
     <>
       <section className={style.aboutpage}>
-        <div className="container">
-          <div className="about-title">
-            <h2>حول متجرنا الإلكتروني</h2>
-            <p>
-              يوفر متجرنا العديد من القطع النادرة والجميلة من مصادر محلية
-              وعالمية
-            </p>
-          </div>
-
-          <div className="about-images">
-            <div className="about-img">
-              <Image src={aboutImg1} alt="about-image" />
-            </div>
-
-            <div className="about-img">
-              <Image src={aboutImg2} alt="about-image" />
-            </div>
-          </div>
-
-          <div className="story">
+        <div className="about-intro">
+          <div className="container">
             <div className="row">
-              <div className="col-lg-3">
-                <h3><FormattedMessage id="story"/></h3>
+              <div className="col-md-6 col-12">
+                <div className="intro-content">
+                  <h4>نبذة عنا</h4>
+                  <h6>طريقة سهلة لبدء حلول الأعمال الناجحة</h6>
+                  <p className="intro-desc">
+                    ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر
+                    للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم
+                    عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه
+                    التصميم فيظهر بشكل لا يليق.
+                  </p>
+
+                  <ul>
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>إطالة عمر سيارتك</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>أخصائيو إصلاح الفرامل</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>كاتمات الصوت وأنظمة العادم</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>خدمات نظام الوقود</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>التوجيه والتعليق</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>تشخيصات الكمبيوتر الكاملة</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>تحليل كامل للسلامة</p>
+                    </li>
+
+                    <li>
+                      <span>
+                        <UL />
+                      </span>
+                      <p>حافظ على برودة محرك سيارتك</p>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
-              <div className="col-lg-9">
-                <h4>
-                  تتزايد شعبية النظارات الشمسية كل عام، حيث تعتبر ليست فقط وسيلة
-                  للحماية من الشمس ولكن أيضًا إكسسوار أنيق يضفي لمسة خاصة على
-                  المظهر العام للشخص. ومع تزايد الطلب على النظارات الشمسية ،
-                  توجد العديد من المتاجر التي تبيع هذا النوع من النظارات.
-                </h4>
-
-                <ul>
-                  <li>
-                    يتميز متجر النظارات الشمسية بتوفير مجموعة كبيرة ومتنوعة من
-                    النظارات الشمسية بأشكال وأحجام وألوان مختلفة لتناسب جميع
-                    الأذواق والأعمار. ويتمثل دور المتجر في توفير نظارات شمسية
-                    عالية الجودة بأسعار معقولة تناسب جميع الميزانيات.
-                  </li>
-
-                  <li>
-                    علاوة على ذلك، يقدم متجر النظارات الشمسية أيضًا خدمات متنوعة
-                    مثل توفير النظارات الطبية الشمسية لأولئك الذين يحتاجون إلى
-                    نظارات طبية، وتوفير العناية والصيانة للنظارات الشمسية
-                    المباعة، وتوفير الإكسسوارات المختلفة للنظارات الشمسية مثل
-                    الحافظات والأشرطة وغيرها.
-                  </li>
-
-                  <li>
-                    يتميز المتجر الذي يعمل بشكل جيد بموظفين مدربين على مساعدة
-                    العملاء في العثور على النظارات الشمسية المناسبة لهم وتقديم
-                    المشورة فيما يتعلق بالأشكال والألوان والأحجام الأكثر ملاءمة
-                    لتناسب مظهر الشخص.
-                  </li>
-                </ul>
+              <div className="col-md-6 col-12">
+                <div className="intro-img">
+                  <Image src={introImg} alt="Intro-Img" />
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div className="vision">
-            <div className="vision-image">
-              <Image src={mission} alt="mission" />
-            </div>
+        <div className="intro-banner">
+          <Image src={banner} alt="Image" />
+        </div>
 
-            <div className="vision-content">
-              <div className="vision-centent-element">
-                <h4>مهمتنا</h4>
-                <p>
-                  ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر
-                  للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم
-                  عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه
-                  التصميم فيظهر بشكل لا يليق.
-                </p>
+        <div className="vision">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-7 col-12">
+                <div className="vision-img">
+                  <Image src={about} alt="img" />
+                </div>
               </div>
 
-              <div className="vision-centent-element">
-                <h4>رؤيتنا</h4>
-                <p>
-                  ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر
-                  للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم
-                  عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه
-                  التصميم فيظهر بشكل لا يليق.
-                </p>
+              <div className="col-md-5 col-12">
+                <div className="vision-content">
+                  <h4>نبذة عنا</h4>
+                  <h6>مهمتنا ورؤيتنا</h6>
+                  <p>
+                    ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر
+                    للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم
+                    عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه
+                    التصميم فيظهر بشكل لا يليق.
+                  </p>
+
+                  <p>
+                    ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر
+                    للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم
+                  </p>
+
+                  <div className="quote">
+                    <p>
+                      "يجب أن أقول ، أعتقد أن هذا هو المتجر الأكثر شهرة وحداثة
+                      الذي زرته على الإطلاق"
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <AboutSlider/>
+        <div className="testminals">
+          <div className="testminals-title">
+            <div className="test-img">
+              <Image src={textR} alt="Image" />
+            </div>
+
+            <h4>اراء العملاء</h4>
+
+            <div className="test-img">
+              <Image src={textL} alt="Image" />
+            </div>
+          </div>
+
+          <div className="testminals-slider">
+            <Swiper
+              slidesPerView={2.8}
+              spaceBetween={41}
+              centeredSlides={true}
+              loop={true}
+              pagination={{
+                clickable: true,
+              }}
+              modules={[Pagination]}
+              className="mainSwiper"
+            >
+              <SwiperSlide>
+                <div className="testminals-card">
+                  <div className="test-card-img">
+                    <Image src={test1} alt="user-image" />
+                  </div>
+
+                  <div className="test-card-content">
+                    <div className="test-symbol">
+                      <Quotes />
+                    </div>
+                    <p>
+                      ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                      ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على
+                      المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى
+                      يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                    </p>
+
+                    <h4>محمد ابراهيم</h4>
+                    <h6>مصمم </h6>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testminals-card">
+                  <div className="test-card-img">
+                    <Image src={test2} alt="user-image" />
+                  </div>
+
+                  <div className="test-card-content">
+                    <div className="test-symbol">
+                      <Quotes />
+                    </div>
+                    <p>
+                      ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                      ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على
+                      المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى
+                      يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                    </p>
+
+                    <h4>محمد ابراهيم</h4>
+                    <p>مصمم </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testminals-card">
+                  <div className="test-card-img">
+                    <Image src={test3} alt="user-image" />
+                  </div>
+
+                  <div className="test-card-content">
+                    <div className="test-symbol">
+                      <Quotes />
+                    </div>
+                    <p>
+                      ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                      ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على
+                      المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى
+                      يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                    </p>
+
+                    <h4>محمد ابراهيم</h4>
+                    <p>مصمم </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testminals-card">
+                  <div className="test-card-img">
+                    <Image src={test2} alt="user-image" />
+                  </div>
+
+                  <div className="test-card-content">
+                    <div className="test-symbol">
+                      <Quotes />
+                    </div>
+                    <p>
+                      ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                      ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على
+                      المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى
+                      يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                    </p>
+
+                    <h4>محمد ابراهيم</h4>
+                    <p>مصمم </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="testminals-card">
+                  <div className="test-card-img">
+                    <Image src={test1} alt="user-image" />
+                  </div>
+
+                  <div className="test-card-content">
+                    <div className="test-symbol">
+                      <Quotes />
+                    </div>
+                    <p>
+                      ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم
+                      ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على
+                      المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى
+                      يتحدث عنه التصميم فيظهر بشكل لا يليق.
+                    </p>
+
+                    <h4>محمد ابراهيم</h4>
+                    <p>مصمم </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
         </div>
       </section>
     </>

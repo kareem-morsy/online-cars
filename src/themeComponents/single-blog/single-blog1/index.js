@@ -11,8 +11,6 @@ import Twitter from "./assets/images/tweter.svg";
 import Calendar from "./assets/images/calendar.svg";
 import Link from "next/link";
 import Image from "next/future/image";
-import Comments from "./Comments";
-import CommentsGroup from "./CommentsGroup";
 import BlogSidebar from "./BlogSidebar";
 import { FormattedMessage } from "react-intl";
 
@@ -22,6 +20,10 @@ const SingleBlog = () => {
       <section className={style.singleBlog}>
         <div className="container">
           <div className="row">
+            <div className="col-xl-4 col-12">
+              <BlogSidebar />
+            </div>
+
             <div className="col-xl-8 col-12">
               <div className="blog-img">
                 <Image src={blogImg} alt="blog-img" />
@@ -29,156 +31,109 @@ const SingleBlog = () => {
 
               <div className="date-user">
                 <div className="blog-date">
-                  <Calendar />
                   <p>August 3, 2022</p>
+                  <Calendar />
                 </div>
                 <div className="writer">
-                  <User />
                   <p>Admin</p>
+                  <User />
                 </div>
               </div>
 
-              <h2>عنوان التدوينة يكتب هنا بشكل كامل</h2>
+              <h2>
+                تصميم شعار قناة يوتيوب احترافي YouTube Logo | امتلك لوجو مميز
+                لقناة اليوتيوب
+              </h2>
 
               <p className="blog-content">
                 النظارة بين التصميم العصري والوظائف المتقدمة لتحقيق تجربة رائعة
                 للشمسية الخاصة بك
               </p>
 
+              <h4>شعار فيديو يوتيوب</h4>
+
               <p className="blog-content">
-                تتميز هذه النظارة بإطارها الأنيق المصنوع من مواد عالية الجودة،
-                مما يمنحها المتانة والقوة لتدوم طويلاً. بفضل التصميم الأنيق
-                والألوان المتنوعة، ستتمكن من اختيار النظارة التي تناسب أسلوبك
-                الشخصي وتضفي لمسة من الأناقة على مظهرك.
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
 
               <p className="blog-content">
-                تتميز العدسات بتقنية حماية 100% من الأشعة فوق البنفسجية، مما
-                يحمي عينيك من الأشعة الضارة ويقلل من تأثير الوهج. بالإضافة إلى
-                ذلك، توفر العدسات الواقية من الخدش والتي تعكس الضوء الزائد رؤية
-                واضحة حتى في ظروف الإضاءة المشرقة.
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
 
               <p className="blog-content">
-                توفر النظارة الشمسية أيضًا راحة فائقة، حيث تم تصميم الأذرع
-                بعناية لتناسب الوجه بشكل مثالي وتوفر لك ملاءمة مريحة طوال اليوم.
-                كما أن الوزن الخفيف والتصميم الانسيابي يجعلان النظارة مثالية
-                للارتداء اليومي والأنشطة الخارجية.
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
 
-              <div className="quote-section">
-                <p>
-                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
-                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
-                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
-                  التى يولدها التطبيق. ع.
-                </p>
-
-                <p>
-                  إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى
-                  زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء
-                  لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص،
-                  حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية
-                  لتصميم الموق
-                </p>
-              </div>
-
-              <div className="sub-images">
-                <div className="row">
-                  <div className="col-md-6 col-12">
-                    <div className="sub-images-img">
-                      <Image src={blogImg} alt="blog-img" />
-                    </div>
-                  </div>
-
-                  <div className="col-md-6 col-12">
-                    <div className="sub-images-img">
-                      <Image src={blogImg} alt="blog-img" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="social-share">
-                <p>
-                  <FormattedMessage id="shareVia" />
-                </p>
-                <div className="social-items">
-                  <Link href="">
-                    <a>
-                      <Facebook />
-                    </a>
-                  </Link>
-
-                  <Link href="">
-                    <a>
-                      <Twitter />
-                    </a>
-                  </Link>
-
-                  <Link href="">
-                    <a>
-                      <Insta />
-                    </a>
-                  </Link>
-
-                  <Link href="">
-                    <a>
-                      <Snap />
-                    </a>
-                  </Link>
-                </div>
-              </div>
-
-              <h2>عنوان التدوينة يكتب هنا بشكل كامل</h2>
+              <h4>شعار فيديو يوتيوب</h4>
 
               <p className="blog-content">
-                النظارة بين التصميم العصري والوظائف المتقدمة لتحقيق تجربة رائعة
-                للشمسية الخاصة بك
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
 
               <p className="blog-content">
-                تتميز هذه النظارة بإطارها الأنيق المصنوع من مواد عالية الجودة،
-                مما يمنحها المتانة والقوة لتدوم طويلاً. بفضل التصميم الأنيق
-                والألوان المتنوعة، ستتمكن من اختيار النظارة التي تناسب أسلوبك
-                الشخصي وتضفي لمسة من الأناقة على مظهرك.
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
+              </p>
+
+              <ul>
+                <li>أثناء مشاهدة الفيديو</li>
+                <li>داخل صفحة القناة</li>
+                <li>التعليقات على الفيديو</li>
+                <li>الاشتراكات</li>
+                <li>القنوات المميزة</li>
+                <li>صفحة نتائج البحث</li>
+              </ul>
+
+              <p className="blog-content">
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
 
               <p className="blog-content">
-                تتميز العدسات بتقنية حماية 100% من الأشعة فوق البنفسجية، مما
-                يحمي عينيك من الأشعة الضارة ويقلل من تأثير الوهج. بالإضافة إلى
-                ذلك، توفر العدسات الواقية من الخدش والتي تعكس الضوء الزائد رؤية
-                واضحة حتى في ظروف الإضاءة المشرقة.
+                يُعد شعار فيديو يوتيوب هو العلامة المائية المميزة التي تظهر على
+                مقاطع الفيديو التي يتم تحميلها من قبل قناة معينة.
               </p>
-
-              <div className="pagination">
-                <Link href="/">
-                  <a className="prev">
-                    <Right />
-                    <FormattedMessage id="prevBlog" />
-                  </a>
-                </Link>
-
-                <Link href="/">
-                  <a className="next">
-                    <FormattedMessage id="nextBlog" />
-                    <Left />
-                  </a>
-                </Link>
-              </div>
 
               <section className="comments-section">
-                <Comments />
-                <CommentsGroup />
 
-                <Link href="/">
-                  <a className="more-comments-bttn"><FormattedMessage id="moreComments"/></a>
-                </Link>
+                <h5>ارسل لنا</h5>
+                <p>إترك لنا تعليقك وسيف يتم التواصل معك</p>
+
+                <form>
+                  <div className="row">
+                    <div className="col-md-6 col-12">
+                      <div className="form-group">
+                        <label>الاسم الاول *</label>
+                        <input type="text" className="form-control" placeholder="هنا يكتب الاسم الاول"/>
+                      </div>
+
+                    </div>
+
+                    <div className="col-md-6 col-12">
+                      <div className="form-group">
+                        <label>البريد الالكتروني *</label>
+                        <input type="text" className="form-control" placeholder="هنا يكتب البريد الالكتروني"/>
+                      </div>
+
+                    </div>
+
+                    <div className="col-md-12 col-12">
+                      <div className="form-group">
+                        <label>أضف ملاحظة</label>
+                        <textarea className="form-control" placeholder="هنا يكتب ملاحظات على طلبك"></textarea>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <button type="submit">تأكيد</button>
+
+                </form>
               </section>
-            </div>
-
-            <div className="col-xl-4 col-12">
-              <BlogSidebar />
             </div>
           </div>
         </div>
