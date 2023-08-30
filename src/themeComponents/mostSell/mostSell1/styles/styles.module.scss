@@ -22,6 +22,12 @@
         display: block;
         margin: 15px auto;
       }
+
+      @media (max-width : 480px) {
+        font-size: 19px;
+        font-weight: 500;
+        width: 70%;
+      }
     }
 
     .mostSell-card {
@@ -218,7 +224,7 @@
             margin: 0px 10px;
             text-decoration: line-through;
             [data-theme="dark"] & {
-              color: #9c0646;
+              color : #bfadad;
             }
           }
         }

@@ -207,6 +207,9 @@
           border-radius: 10px;
           right: 39%;
           left: 39%;
+          [data-theme = "dark"] & {
+            background-color: #f8f9fa;
+          }
 
           .swiper-pagination-bullet-active {
             background-color: #4158f2;

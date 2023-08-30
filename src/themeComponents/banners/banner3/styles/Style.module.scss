@@ -19,9 +19,8 @@
           border-radius: 10px;
         }
       }
-
     }
-    .intro-overlay{
+    .intro-overlay {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -44,8 +43,55 @@
         position: absolute;
         inset: 0;
         height: 100%;
+        width: 100%;
         border-radius: 10px;
       }
+    }
+
+    .main-advertise {
+      display: block;
+      @media (max-width: 767px) {
+        display: none;
+      }
+    }
+
+    .advertise-slider {
+      display: none;
+      @media (max-width: 767px) {
+        display: block;
+      }
+    }
+
+    .offer-next,
+    .offer-prev {
+      background-color: transparent;
+      border: 1px solid #000;
+      display: inline-flex;
+      border-radius: 3px;
+      justify-content: center;
+      align-items: center;
+      width: 41px;
+      height: 30px;
+      [dir="ltr"] & {
+        transform: rotate(180deg);
+      }
+
+      [data-theme="dark"] & {
+        border: 1px solid #fff;
+        svg {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+
+    .swiper-bttns {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 35px;
     }
   }
 }

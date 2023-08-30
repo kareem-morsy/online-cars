@@ -459,6 +459,12 @@
             color: #fff;
           }
 
+          @media (max-width : 480px) {
+            font-size: 19px;
+            font-weight: 500;
+            width: 70%;
+          }
+
           &::before {
             content: "";
             width: 50px;
@@ -468,6 +474,9 @@
             margin: 0px 0px 0px 15px;
             border-radius: 10px;
             transform: rotate(90deg);
+            @media (max-width : 480px) {
+              margin : 0px;
+            }
           }
 
           &::after {
@@ -477,6 +486,9 @@
             background-color: #d3d3d3;
             margin-right: 35px;
             display: inline-block;
+            @media (max-width : 480px) {
+              display : none;
+            }
           }
         }
 
@@ -492,6 +504,20 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          [data-theme = "dark"] &{
+            border: 1px solid #fff;
+            color: #fff;
+            opacity: 1;
+          }
+
+          @media (max-width : 480px) {
+            font-size: 15px;
+            padding : 0px;
+            width : 150px;
+            height : 45px;
+            margin-top : 15px;
+  
+          }
         }
       }
 
@@ -503,12 +529,22 @@
         width: 100%;
         min-height: 500px;
         border-radius: 10px;
+        [data-theme = "dark"] &{
+          background-color: #242424;
+        }
   
   
         .main-card-img {
           position: relative;
           width: 100%;
           height: 80%;
+          [data-theme = "dark"] &{
+            background-color: #fff;
+            border-radius: 10px;
+            img{
+              border-radius: 10px;
+            }
+          }
   
           img {
             width: 100%;
@@ -586,6 +622,9 @@
           text-align: center;
           margin: 30px auto 15px auto;
           display: block;
+          [data-theme = "dark"] &{
+            color: #fff;
+          }
   
         }
   
@@ -595,6 +634,9 @@
           font-size: 16px;
           font-weight: 300;
           margin: 15px auto;
+          [data-theme = "dark"] &{
+            color: #fff;
+          }
         }
   
         .stars {
@@ -613,6 +655,9 @@
             text-align: right;
             font-size: 16px;
             font-weight: 400;
+            [data-theme = "dark"] &{
+              color: #fff;
+            }
           }
   
           .past-price {
@@ -620,6 +665,9 @@
             font-size: 14px;
             font-weight: 400;
             text-decoration: line-through;
+            [data-theme = "dark"] &{
+              color : #bfadad;
+            }
           }
         }
   
@@ -649,12 +697,16 @@
         border: 1px solid rgba(65, 88, 242, 0.2);
         right: 39%;
         left: 39%;
+        [data-theme = "dark"] & {
+          background-color: #f8f9fa;
+        }
   
         .swiper-pagination-bullet-active {
           background-color: #4158F2;
           width: 25px;
           height: 10px;
           border-radius: 10px;
+          
         }
   
       }

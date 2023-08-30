@@ -50,7 +50,7 @@ const ReviewsSection = () => {
           >
             {reviewSlider?.map((review, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
 
                   <ReviewsCard review={review} />
 
@@ -58,39 +58,7 @@ const ReviewsSection = () => {
               );
             })}
 
-            {/* <SwiperSlide>
-              <div className="slide">
-                <div className="row">
-                  {reviewSlider?.map((review, index) => {
-                    return (
-                      <div
-                        className="col-lg-4 col-md-6 col-12"
-                        key={index}
-                      >
-                        <ReviewsCard blog={review} />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="slide">
-                <div className="row">
-                  {reviewSlider?.map((blog, index) => {
-                    return (
-                      <div
-                        className="col-lg-4 col-md-6 col-12"
-                        key={index}
-                      >
-                        <ReviewsCard blog={blog} />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </SwiperSlide> */}
+           
 
           </Swiper>
           <div className="swiper-bttns">

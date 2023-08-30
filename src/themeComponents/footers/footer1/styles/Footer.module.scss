@@ -3,6 +3,8 @@
     width: 100%;
     min-height: 380px;
     background-image: url(../assets/images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 60px 0px 0px 0px;
     [data-theme="dark"] & {
       background-color: #17191a;
@@ -69,6 +71,12 @@
         img {
           width: 100%;
           height: 100%;
+        }
+
+        @media (max-width : 767px) {
+          svg{
+            filter : brightness(0.5);
+          }
         }
       }
     }
@@ -233,21 +241,27 @@
         display: flex;
         flex-wrap: nowrap;
         justify-content: flex-end;
+        gap : 12px;
         @media (max-width: 991px) {
           order: 1;
           justify-content: center;
           width: 100%;
           margin-bottom: 25px;
+          margin-top: 25px;
         }
 
         .sponsor-logo {
-          height: 26px;
-          border-radius: 3px;
-          margin: 0px 5px;
+          width: 41px;
+          height : 41px;
+          border-radius : 50%;
+          background-color : #fff;
+          display : flex;
+          justify-content: center;
+          align-items: center;
+          
           svg {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+           width: 50%;
+           height: 50%;
           }
         }
       }

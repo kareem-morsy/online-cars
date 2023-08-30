@@ -7,10 +7,10 @@ import Twitter from "./assets/images/tweter.svg";
 import Instagram from "./assets/images/insta.svg";
 import Snapchat from "./assets/images/snap.svg";
 import Mastercard from "./assets/images/mastercard.svg";
-import Visa from "./assets/images/visa.svg";
-import Mada from "./assets/images/mada.svg";
-import Pay from "./assets/images/pay.svg";
-import Stc from "./assets/images/stc.svg";
+import Discover from "./assets/images/discover.svg";
+import Paypass from "./assets/images/paypass.svg";
+import PayPal from "./assets/images/paypal.svg";
+import Qiwi from "./assets/images/qiwi.svg";
 import Ejada from "./assets/images/Ejada.png";
 
 const Footer = () => {
@@ -142,19 +142,19 @@ const Footer = () => {
 
               <div className="sponsors">
                 <div className="sponsor-logo">
-                  <Stc />
+                  <Paypass />
                 </div>
 
                 <div className="sponsor-logo">
-                  <Pay />
+                  <Discover/>
                 </div>
 
                 <div className="sponsor-logo">
-                  <Mada />
+                  <PayPal />
                 </div>
 
                 <div className="sponsor-logo">
-                  <Visa />
+                  <Qiwi />
                 </div>
 
                 <div className="sponsor-logo">

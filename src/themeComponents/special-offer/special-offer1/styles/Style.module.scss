@@ -27,6 +27,9 @@
           margin: 0px 0px 0px 15px;
           border-radius: 10px;
           transform: rotate(90deg);
+          @media (max-width: 480px) {
+            margin: 0px;
+          }
         }
 
         &::after {
@@ -36,6 +39,19 @@
           background-color: #d3d3d3;
           margin-right: 35px;
           display: inline-block;
+          @media (max-width: 480px) {
+            display: none;
+          }
+
+          @media (min-width : 768px) and (max-width : 991px) {
+            width: 55%;
+          }
+        }
+
+        @media (max-width: 991px) {
+          font-size: 19px;
+          font-weight: 500;
+          width: 70%;
         }
       }
 
@@ -51,6 +67,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        [data-theme="dark"] & {
+          border: 1px solid #fff;
+          color: #fff;
+          opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 15px;
+          padding: 0px;
+          width: 150px;
+          height: 45px;
+          margin-top: 15px;
+        }
       }
     }
 
@@ -63,6 +92,10 @@
       width: 100%;
       height: 96%;
       margin: 0px auto;
+      [data-theme="dark"] & {
+        background-color: #17191a;
+        border: 1px solid #fff;
+      }
 
       .offer-timer {
         display: flex;
@@ -70,7 +103,7 @@
         border-radius: 10px;
         padding: 25px;
         width: 70%;
-        margin: 41px auto 0px auto;
+        margin: 41px auto 21px auto;
         color: #fff;
         justify-content: center;
         gap: 10px;
@@ -114,11 +147,21 @@
       margin: 0px auto 30px auto;
       z-index: 9;
       position: relative;
+      [data-theme="dark"] & {
+        background-color: #242424;
+      }
 
       .main-card-img {
         position: relative;
         width: 100%;
         height: 80%;
+        [data-theme="dark"] & {
+          background-color: #fff;
+          border-radius: 10px;
+          img {
+            border-radius: 10px;
+          }
+        }
 
         img {
           width: 100%;
@@ -195,6 +238,9 @@
         text-align: center;
         margin: 30px auto 15px auto;
         display: block;
+        [data-theme="dark"] & {
+          color: #fff;
+        }
       }
 
       .main-card-desc {
@@ -203,6 +249,9 @@
         font-size: 16px;
         font-weight: 300;
         margin: 15px auto;
+        [data-theme="dark"] & {
+          color: #fff;
+        }
       }
 
       .stars {
@@ -221,6 +270,9 @@
           text-align: right;
           font-size: 18px;
           font-weight: 400;
+          [data-theme="dark"] & {
+            color: #fff;
+          }
         }
 
         .past-price {
@@ -228,6 +280,9 @@
           font-size: 18px;
           font-weight: 400;
           text-decoration: line-through;
+          [data-theme="dark"] & {
+            color: #bfadad;
+          }
         }
       }
 
@@ -256,11 +311,19 @@
       min-height: 280px;
       margin-bottom: 30px;
 
+      [data-theme="dark"] & {
+        background-color: #242424;
+      }
+
       .horizontal-img {
         width: 50%;
         position: relative;
         padding-top: 35%;
         overflow: hidden;
+        [data-theme="dark"] & {
+          background-color: #fff;
+          border-radius: 10px;
+        }
 
         img {
           width: 100%;
@@ -298,6 +361,9 @@
           font-size: 18px;
           font-weight: 400;
           margin-bottom: 21px;
+          [data-theme="dark"] & {
+            color: #fff;
+          }
         }
 
         .horizontal-desc {
@@ -305,6 +371,9 @@
           font-size: 16px;
           font-weight: 300;
           margin: 21px 0px;
+          [data-theme="dark"] & {
+            color: #fff;
+          }
         }
 
         .stars {
@@ -321,6 +390,9 @@
             color: #040414;
             font-size: 18px;
             font-weight: 400;
+            [data-theme="dark"] & {
+              color: #fff;
+            }
           }
 
           .past-price {
@@ -328,6 +400,9 @@
             font-size: 18px;
             font-weight: 400;
             text-decoration: line-through;
+            [data-theme="dark"] & {
+              color: #fff;
+            }
           }
         }
       }
@@ -348,6 +423,9 @@
       border: 1px solid rgba(65, 88, 242, 0.2);
       right: 39%;
       left: 39%;
+      [data-theme="dark"] & {
+        background-color: #f8f9fa;
+      }
 
       .swiper-pagination-bullet-active {
         background-color: #4158f2;
@@ -382,6 +460,47 @@
 
       .offer-prev {
         background-color: #4158f2;
+      }
+    }
+
+    .Offers-section {
+      display: block;
+      @media (max-width: 991px) {
+        display: none;
+      }
+    }
+
+    .mob-slider {
+
+      display: none;
+      @media (max-width: 991px) {
+        display: block;
+      }
+      
+      .special-offer-slider{
+        padding : 5px;
+
+        .main-card{
+          padding : 5px;
+          width : 95%;
+          margin : 0px auto;
+        }
+
+        .offer-timer {
+          width: 100%;
+          padding : 10px;
+        }
+      }
+
+      
+
+      .swiper-bttns {
+        width: 95%;
+        right: 10px;
+        button {
+          width: 30px;
+          height: 30px;
+        }
       }
     }
   }

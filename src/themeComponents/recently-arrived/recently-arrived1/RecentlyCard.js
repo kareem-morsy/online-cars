@@ -1,12 +1,16 @@
 import Image from "next/future/image";
 import Link from "next/link";
 import Rate from "rc-rate";
-import React from "react";
+import React, { useState } from "react";
 import Bag from "./assets/images/bag.svg";
 import Zoom from "./assets/images/zoom.svg";
 import Fav from "./assets/images/fav.svg";
+import SharedModal from "./SharedModal";
 
 const RecentlyCard = ({ product }) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="main-card">
@@ -56,6 +60,8 @@ const RecentlyCard = ({ product }) => {
           </div>
         </div>
       </div>
+
+      <SharedModal show={show} onHide={handleClose} />
     </>
   );
 };

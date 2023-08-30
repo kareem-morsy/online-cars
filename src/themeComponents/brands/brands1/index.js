@@ -35,7 +35,7 @@ const BrandSection = () => {
 
           <div className="brands-tabs">
             <Tabs defaultActiveKey="brand1" id="filterTabs" className="mb-3">
-              <Tab eventKey="brand1" title={image1}>
+              <Tab eventKey="brand1" title={image7}>
                 <div className="row">
                   <div className="col-md-4 col-12">
                     <div className="brand-cards">

@@ -5,9 +5,7 @@
     z-index: 5;
     margin-top: -100px;
 
-    @media (max-width: 767px) {
-      height: 500px;
-    }
+    
 
     .features-cards {
       background-color: #4158f2;
@@ -18,9 +16,9 @@
       border-radius: 10px;
 
       @media (max-width: 1199px) {
-        width: 90%;
+        width: 100%;
         flex-wrap: wrap;
-        margin: 130px auto;
+        padding: 25px;
       }
 
       @media (min-width: 1200px) and (max-width: 1399px) {

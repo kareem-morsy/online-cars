@@ -18,6 +18,12 @@
           color: #fff;
         }
 
+        @media (max-width: 991px) {
+          font-size: 17px;
+          font-weight: 500;
+          width: 73%;
+        }
+
         &::before {
           content: "";
           width: 50px;
@@ -27,6 +33,9 @@
           margin: 0px 0px 0px 15px;
           border-radius: 10px;
           transform: rotate(90deg);
+          @media (max-width: 480px) {
+            margin: 0px;
+          }
         }
 
         &::after {
@@ -36,6 +45,12 @@
           background-color: #d3d3d3;
           margin-right: 35px;
           display: inline-block;
+          @media (max-width: 480px) {
+            display: none;
+          }
+          @media (min-width : 768px) and (max-width : 991px) {
+            width: 55%;
+          }
         }
       }
 
@@ -51,6 +66,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        [data-theme="dark"] & {
+          border: 1px solid #fff;
+          color: #fff;
+          opacity: 1;
+        }
+
+        @media (max-width: 480px) {
+          font-size: 15px;
+          padding: 0px;
+          width: 150px;
+          height: 45px;
+          margin-top: 15px;
+        }
       }
     }
 
@@ -71,8 +99,12 @@
           height: auto;
           gap: 15px;
         }
+        @media (max-width: 767px) {
+          overflow: scroll;
+        }
 
         .nav-link {
+          border: none;
           img {
             width: 160px;
             height: 100px;
@@ -90,7 +122,6 @@
         }
 
         [data-theme="dark"] & {
-          background-color: #2b0000;
         }
 
         .active {
@@ -102,6 +133,28 @@
         .nav-item {
           button {
             background-color: transparent;
+
+            [data-theme="dark"] & {
+              background-color: #242424;
+              margin: 0px 3px;
+            }
+
+            @media (max-width: 767px) {
+              width: 85px;
+              height: 85px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .active {
+            [data-theme="dark"] & {
+              background-color: #fff;
+              margin: 0px 3px;
+            }
           }
 
           @media (max-width: 550px) {
@@ -125,23 +178,33 @@
         min-height: 230px;
         margin: 30px 0px;
 
+        [data-theme="dark"] & {
+          background-color: #242424;
+        }
+
+        @media (max-width: 480px) {
+          padding: 21px 5px;
+        }
+
         .horizontal-img {
           width: 50%;
           position: relative;
           padding-top: 35%;
           overflow: hidden;
+          border-radius: 10px;
+          border: 1px solid rgba(4, 4, 20, 0.05);
 
           img {
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
             position: absolute;
-            inset: 0;
+            inset: 10%;
           }
 
           .card-pane {
             position: absolute;
-            top: 15px;
-            left: 15px;
+            top: 5px;
+            left: 5px;
 
             span {
               border-radius: 5px;
@@ -167,6 +230,9 @@
             font-size: 18px;
             font-weight: 400;
             margin-bottom: 21px;
+            [data-theme="dark"] & {
+              color: #fff;
+            }
           }
 
           .horizontal-desc {
@@ -174,6 +240,9 @@
             font-size: 16px;
             font-weight: 300;
             margin: 21px 0px;
+            [data-theme="dark"] & {
+              color: #fff;
+            }
           }
 
           .stars {
@@ -190,6 +259,9 @@
               color: #040414;
               font-size: 18px;
               font-weight: 400;
+              [data-theme="dark"] & {
+                color: #fff;
+              }
             }
 
             .past-price {
@@ -197,6 +269,9 @@
               font-size: 18px;
               font-weight: 400;
               text-decoration: line-through;
+              [data-theme="dark"] & {
+                color: #bfadad;
+              }
             }
           }
         }
@@ -229,6 +304,9 @@
         font-size: 16px;
         font-weight: 300;
         margin-bottom: 45px;
+        [data-theme="dark"] & {
+          color: #bfadad;
+        }
       }
 
       .brand-main-link {
@@ -243,12 +321,16 @@
 
         font-size: 16px;
         font-weight: 500;
+        @media (max-width: 480px) {
+          min-width : 100%;
+        }
         height: 65px;
 
         span {
           position: absolute;
           top: 21px;
           left: 21px;
+
         }
       }
     }

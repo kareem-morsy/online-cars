@@ -51,7 +51,7 @@ const BlogSection = () => {
 
             {blogSections?.map((blog, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
 
                   <BlogSecCard blog={blog}  key={index}/>
 

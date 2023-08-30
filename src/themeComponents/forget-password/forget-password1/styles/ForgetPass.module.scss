@@ -1,13 +1,14 @@
 .forgetPass {
   :global {
     position: relative;
-    height: auto;
-    .form-bg{
+    height: 100vh;
+    min-height: 900px;
+    .form-bg {
       width: 100%;
-      height : 100%;
-      img{
-        width : 100%;
-        height : 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
       }
     }
 
@@ -18,23 +19,34 @@
 
     .main-form-details {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.90);
-      inset : 80px;
+      background-color: rgba(255, 255, 255, 0.9);
+      inset: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 90%;
       border-radius: 25px;
+      padding: 0px 23%;
+
+      [data-theme ="dark"] &{
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      
 
       .main-form-logo {
         width: 250px;
         height: 100px;
-        margin: 60px auto;
+        margin: 150px auto 60px auto;
 
         img {
           width: 100%;
           height: 100%;
           object-fit: contain;
+          [data-theme = "dark"] &{
+
+            filter: brightness(0) invert(1);
+          }
         }
       }
 
@@ -51,12 +63,11 @@
       }
     }
 
-
     h3 {
-      color: #2b0000;
+      color: #000;
       font-size: 20px;
       font-weight: 700;
-      margin: 0px 0px 21px 0px;
+      margin: 0px 0px 50px 0px;
       text-align: center;
 
       [data-theme="dark"] & {
@@ -65,68 +76,11 @@
     }
 
     .login-text {
-      color: #2b0000;
-      font-size: 16px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 14px;
       font-weight: 300;
-      margin-bottom: 15px;
+      margin-bottom: 50px;
       text-align: center;
-
-      [data-theme="dark"] & {
-        color: #fff;
-      }
-    }
-
-    .social-login {
-      display: flex;
-      flex-direction: row;
-      gap: 25px;
-      width: 70%;
-      margin : 50px auto;
-      justify-content: center;
-
-      a {
-        border-radius: 8px;
-        width: 35%;
-        height: 45px;
-        display: flex;
-        color: #fff;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-        position: relative;
-
-        span {
-          width: 15%;
-          position: absolute;
-          right: 15px;
-        }
-
-        @media (max-width: 991px) {
-          width: 100%;
-        }
-      }
-
-      .facebook-login {
-        background: #1877f2;
-      }
-
-      .google-login {
-        border-radius: 8px;
-        background: #fff;
-        color: #2b0000;
-      }
-    }
-
-    h4 {
-      margin: 15px auto;
-      color: #565656;
-      font-size: 16px;
-      font-weight: 400;
-      margin: 25px 0px 50px 0px;
-
-      @media (max-width: 991px) {
-        text-align: center;
-      }
 
       [data-theme="dark"] & {
         color: #fff;
@@ -142,7 +96,7 @@
 
       form {
         label {
-          color: rgba(0, 0, 0, 0.60);
+          color: rgba(0, 0, 0, 0.6);
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 21px;
@@ -157,7 +111,6 @@
 
           p {
             font-size: 12px;
-
           }
         }
 
@@ -170,17 +123,14 @@
 
           &:focus {
             box-shadow: 0px 0px 0px transparent;
-            border: 1px solid #FC5A34 !important;
+            border: 1px solid #fc5a34 !important;
           }
 
           [data-theme="dark"] & {
             background-color: #2c3034;
             color: #fff;
-
           }
         }
-
-       
 
         button {
           width: 45%;
@@ -191,55 +141,15 @@
           border-radius: 8px;
           background-color: #040414;
           color: #fff;
-          margin: 25px auto;
-        }
-      }
-
-      .password-div {
-        width: 100%;
-        height: 55px;
-        display: flex;
-        border-radius: 8px;
-        border: 1px solid #040414;
-        
-      
-
-        input {
-          width: 85%;
-          height: 100%;
-          border: 0px solid transparent !important;
-
-          &:focus{
-            border: 0px solid #FC5A34 !important;
-            
-            
-          }
-
-          [data-theme="dark"] & {
-            background-color: #2c3034;
+          margin: 50px auto;
+          &:active {
+            background-color: #040414;
             color: #fff;
-            border-radius: 0px 6px 6px 0px;
-
           }
-        }
 
-        .show-password-btn {
-          background-color: transparent;
-          border: 0px solid transparent !important;
-          width: 15%;
-          height: 100%;
-          margin: 0px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          [data-theme="dark"] & {
-            background-color: #2c3034;
-            border-radius: 6px 0px 0px 6px;
-
-            svg {
-              filter: brightness(0) invert(1);
-            }
+          [data-theme ="dark"] &{
+            background-color: rgba(255, 255, 255, .95);
+            color: #000;
           }
         }
       }
@@ -249,57 +159,31 @@
         margin: 5px 0px;
         text-transform: initial;
       }
-
-      .remember {
-        height: 45px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .form-check-input {
-          width: 45px;
-          height: 25px;
-          margin-top: 31px;
-        }
-
-        .form-check-label {
-          margin: 35px 21px;
-          color: #040414;
-          font-size: 12px;
-          font-weight: 400;
-        }
-
-        .forget-password-link {
-          color: #2b0000;
-          font-size: 12px;
-          font-weight: 400;
-        }
-      }
     }
 
-    .new-account {
+    .resend {
       display: flex;
-      gap: 15px;
-      margin: 15px auto;
+      justify-content: center;
+    }
 
-      p {
-        color: #040414;
-        font-size: 14px;
-        font-weight: 300;
+    .resend-btn {
+      background-color: transparent !important;
+      border: 0px solid transparent !important;
+      color: rgba(0, 0, 0, 0.6) !important;
+      font-size: 14px;
+      font-weight: 500;
+      display: inline-flex;
+      min-width: 100px;
+      margin: 0px auto 15px auto !important;
+      width: auto;
+      gap: 10px;
 
-        [data-theme="dark"] & {
-          color: #fff;
+      [data-theme="dark"] & {
+        color: #fff !important;
+        svg {
+          filter: brightness(0) invert(1);
         }
-      }
-
-      a {
-        color: #FC5A34;
-        font-size: 14px;
-        font-weight: 800;
-        text-decoration: underline;
       }
     }
   }
-
 }

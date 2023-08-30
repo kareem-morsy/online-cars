@@ -209,6 +209,8 @@ export const singleCard = {
   desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
 };
 
+
+
 //variable for filter section
 export const specialOffer = [
   {
@@ -286,13 +288,13 @@ export const reviewSlider = [
 export const brandSection = [
   {
     id: 1,
-    image: require("./src/assets/images/filter2.png"),
+    image: require("./src/assets/images/brand1.png"),
     title: "قطع غيار سيارة",
   },
 
   {
     id: 2,
-    image: require("./src/assets/images/filter4.png"),
+    image: require("./src/assets/images/brand2.png"),
     title: "قطع غيار سيارة",
   },
 ];
@@ -416,3 +418,51 @@ export const filterPage = [
     desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
   },
 ];
+
+
+//variable for swiper slider
+export const SwiperSlidee = [
+  {
+    id: 1,
+    image: require("./src/assets/images/filter1.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 2,
+    image: require("./src/assets/images/filter2.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 3,
+    image: require("./src/assets/images/filter3.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 4,
+    image: require("./src/assets/images/filter4.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 5,
+    image: require("./src/assets/images/filter5.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 6,
+    image: require("./src/assets/images/filter6.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  },
+  {
+    id: 7,
+    image: require("./src/assets/images/filter7.png"),
+    title: "قطع غيار سيارة",
+    desc: "هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو ",
+  }
+];
+

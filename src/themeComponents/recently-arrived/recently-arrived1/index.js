@@ -4,6 +4,7 @@ import RecentlyCard from "./RecentlyCard";
 import { filterSection } from "../../../../data";
 import { Col } from "react-bootstrap";
 import Link from "next/link";
+import MobSwiper from "./MobSwiper";
 
 const RecentlyAdd = () => {
   return (
@@ -17,18 +18,21 @@ const RecentlyAdd = () => {
             </Link>
           </div>
 
-          <div className="row">
-            {filterSection?.map((product, index) => {
-              return (
-                <Col xl={3} lg={4} md={12} key={index}>
-                  <RecentlyCard product={product} />
-                </Col>
-              );
-            })}
+          <div className="active-section">
+            <div className="row">
+              {filterSection?.map((product, index) => {
+                return (
+                  <Col xl={3} lg={4} md={12} key={index}>
+                    <RecentlyCard product={product} />
+                  </Col>
+                );
+              })}
+            </div>
           </div>
+
+
+          <MobSwiper/>
         </div>
-
-
       </section>
     </>
   );

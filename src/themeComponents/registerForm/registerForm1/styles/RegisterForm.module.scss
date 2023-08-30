@@ -1,7 +1,8 @@
 .registerForm {
   :global {
     position: relative;
-    height: auto;
+    height: 125vh;
+    min-height: 950px;
     .form-bg{
       width: 100%;
       height : 100%;
