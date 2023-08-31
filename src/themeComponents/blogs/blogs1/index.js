@@ -4,6 +4,8 @@ import { blogPage } from "../../../../data";
 import { Col } from "react-bootstrap";
 import { blogSections } from "./../../../../data";
 import Pagination from "react-bootstrap/Pagination";
+import Arrows from "./assets/images/pagArrow.svg";
+import PaginatedItems from "./PaginatedItems";
 
 const BlogsComponent = () => {
   return (
@@ -19,15 +21,19 @@ const BlogsComponent = () => {
           })}
         </div>
 
-        <div className="pagination-section">
+        {/* <div className="pagination-section">
           <Pagination>
-            <Pagination.Item>{1}</Pagination.Item>
-            <Pagination.Item>{2}</Pagination.Item>
+            <Pagination.Item>{1}<span></span></Pagination.Item>
+            <Pagination.Item>{2}<span></span></Pagination.Item>
             <Pagination.Item>{3}</Pagination.Item>
-            <Pagination.Item>{4}</Pagination.Item>
-            <Pagination.Next />
+            
+            <Pagination.Next >
+              <Arrows/>
+            </Pagination.Next>
           </Pagination>
-        </div>
+        </div> */}
+{/* 
+<PaginatedItems itemsPerPage={4} /> */}
       </div>
     </section>
   );

@@ -8,10 +8,14 @@ import sell2 from "./assets/images/sell2.png";
 import ads from "./assets/images/ads.png"
 import Rate from "rc-rate";
 
-const Filters = (props) => {
+const Filters = ({showFilter , toggleFilter}) => {
   return (
     <>
-      <div className="products-filter">
+      <div className={`products-filter ${showFilter ? "show-filter" : "hide-filter"}`}>
+        <div className="filter-head">
+          <h4>الفلاتر</h4>
+          <button onClick={toggleFilter}><Close/></button>
+        </div>
         <div className="filter-unit">
           <div className="filter-unit-head">
             <h4>فئات المنتجات</h4>

@@ -33,9 +33,15 @@ const NavbarSection = (props) => {
       <Navbar expand="lg" className="bg-body-tertiary navi">
         <Container>
           <div className="navbar-section">
-            <Navbar.Brand href="/">
+
+            <Link href="/">
+              <a className="navbar-brand">
               <Image src={logo} alt="logo image" width={100} height={60} />
-            </Navbar.Brand>
+
+              </a>
+            </Link>
+            {/* <Navbar.Brand href="/">
+            </Navbar.Brand> */}
             <Nav className="nav-list">
               <Link href="/">
                 <a

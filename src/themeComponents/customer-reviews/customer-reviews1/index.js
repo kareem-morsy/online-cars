@@ -32,8 +32,11 @@ const ReviewsSection = () => {
               990: {
                 slidesPerView: 3,
               },
-              480: {
+              767 : {
                 slidesPerView: 2,
+              },
+              480: {
+                slidesPerView: 1,
               },
 
               1: {

@@ -357,6 +357,9 @@
         @media (max-width : 1199px) {
           display: none;
         }
+        @media (min-width : 1200px) and (max-width : 1400px) {
+          width: 21%;
+        }
         .form-group {
           span {
             position: absolute;
@@ -452,6 +455,8 @@
         }
 
         .navbar-brand {
+          width: 150px;
+              height: 55px;
           img {
             object-fit: fill;
             object-fit: contain;

@@ -6,6 +6,9 @@
       background: #fbfcff;
       padding: 35px 25px;
       margin-bottom: 30px;
+      @media (max-width : 767px) {
+        padding: 35px 5px;
+      }
       .address-info {
         display: flex;
         justify-content: space-between;
@@ -31,7 +34,10 @@
           border: none;
           color: #000;
           font-size: 14px;
-          font-weight: 800;
+          font-weight: 500;
+          @media (max-width : 480px) {
+            margin-top : -25px;
+          }
         }
       }
 
@@ -59,10 +65,16 @@
             border: none;
             color: #000;
             font-size: 14px;
-            font-weight: 800;
+            font-weight: 500;
             span {
               margin: 0px 5px;
             }
+          }
+
+          @media (max-width : 480px) {
+            min-width : 30%;
+            display: flex;
+            justify-content: flex-end;
           }
         }
       }
@@ -121,6 +133,14 @@
         justify-content: space-between;
         width: 85%;
         margin: 45px 0px;
+        @media (max-width : 767px) {
+          width : 100%;
+          flex-wrap: wrap;
+          .form-group{
+            width : 100%;
+            margin-bottom: 15px;
+          }
+        }
         .form-group {
           border-radius: 25px;
           background: #f6f6f6;
@@ -133,6 +153,20 @@
             display: flex;
             gap: 10px;
           }
+        }
+
+        label {
+          display: flex;
+          cursor: pointer;
+        }
+        
+        input[type="radio"] {
+          // display: none;
+        }
+        
+        input[type="radio"]:checked + label {
+          /* Apply styles to the selected label */
+          color: blue;
         }
       }
 
@@ -178,16 +212,27 @@
       padding: 0px 30px;
       width: 100%;
       margin-bottom: 45px;
+      @media (max-width : 767px) {
+        padding: 0px;
+      }
       .product-row {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width : 767px) {
+          flex-wrap: wrap;
+        }
+
         .product-details {
           display: flex;
           gap: 30px;
           min-width: 33.33%;
+          @media (max-width : 767px) {
+            width : 100%;
+            margin-bottom: 15px;
+          }
           .product-image {
             width: 65px;
             height: 65px;
@@ -307,6 +352,9 @@
             color: #fff;
             font-size: 14px;
             font-weight: 400;
+            @media (max-width : 767px) {
+              width: 42%;
+            }
           }
         }
       }

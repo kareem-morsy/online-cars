@@ -18,7 +18,7 @@
           color: #fff;
         }
 
-        @media (max-width: 991px) {
+        @media (max-width: 1199px) {
           font-size: 17px;
           font-weight: 500;
           width: 73%;
@@ -45,10 +45,10 @@
           background-color: #d3d3d3;
           margin-right: 35px;
           display: inline-block;
-          @media (max-width: 480px) {
+          @media (max-width: 767px) {
             display: none;
           }
-          @media (min-width : 768px) and (max-width : 991px) {
+          @media (min-width : 768px) and (max-width : 1199px) {
             width: 55%;
           }
         }
@@ -72,7 +72,7 @@
           opacity: 1;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 1199px) {
           font-size: 15px;
           padding: 0px;
           width: 150px;
@@ -100,7 +100,8 @@
           gap: 15px;
         }
         @media (max-width: 767px) {
-          overflow: scroll;
+          overflow-x: scroll;
+          height: auto;
         }
 
         .nav-link {
@@ -185,6 +186,27 @@
         @media (max-width: 480px) {
           padding: 21px 5px;
         }
+        
+        @media (min-width : 767px) and (max-width : 991px){
+          flex-wrap: wrap;
+          .horizontal-img{
+            width: 90% !important;
+            margin: auto;
+            padding-top: 85% !important;
+          }
+
+          .horizontal-content{
+            width: 100% !important;
+            text-align: center;
+            margin-top: 0px !important;
+          }
+          .brand-main-card{
+            padding: 0px !important;
+          }
+        }
+
+        
+        
 
         .horizontal-img {
           width: 50%;
@@ -333,6 +355,23 @@
 
         }
       }
+
+
+      @media (min-width : 767px) and (max-width : 991px) {
+        
+          padding: 0px !important;
+          .brand-main-link{
+            min-width: 100%;
+          }
+      }
+
+      @media (min-width : 992px) and (max-width : 1199px) {
+        padding: 0px !important;
+        .brand-main-link{
+          min-width: 100%;
+        }
+      }
+
     }
   }
 }

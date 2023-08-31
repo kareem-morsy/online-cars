@@ -7,6 +7,7 @@
       width: 100%;
       border: 1px solid #ededed;
       border-radius: 10px;
+      min-height: 370px;
 
       .blogSec-card-img {
         width: 100%;
@@ -56,6 +57,9 @@
               color: rgba(4, 4, 20, 0.5);
               font-size: 14px;
               font-weight: 400;
+              [data-theme="dark"] & {
+                color: #fff;
+              }
             }
           }
         }
@@ -87,6 +91,7 @@
         .page-item {
           border: 0px solid #eaeaea;
           padding: 10px;
+          position: relative;
           a {
             border: 0px solid transparent !important;
             color: #565656;
@@ -94,9 +99,27 @@
             font-style: normal;
             font-weight: 500;
           }
+
+          span {
+            width: 8px;
+            height: 2px;
+            display: inline-block;
+            background-color: #eaeaea;
+            margin-right: 18px;
+          }
+
+        
+          // &::after{
+          //   content: "";
+          //   display: inline-block;
+          //   width : 4px;
+          //   height: 1px;
+          //   background-color: red;
+          //   position: absolute;
+          //   top: 10px;
+          // }
         }
       }
     }
-
   }
 }

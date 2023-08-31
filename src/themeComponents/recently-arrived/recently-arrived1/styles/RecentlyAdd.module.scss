@@ -18,7 +18,7 @@
           color: #fff;
         }
 
-        @media (max-width : 991px) {
+        @media (max-width : 1199px) {
           font-size: 19px;
           font-weight: 500;
           width: 75%;
@@ -45,7 +45,7 @@
           background-color: #d3d3d3;
           margin-right: 35px;
           display: inline-block;
-          @media (max-width : 480px) {
+          @media (max-width : 767px) {
             display : none;
           }
           @media (min-width : 768px) and (max-width : 991px) {
@@ -72,7 +72,7 @@
           opacity: 1;
         }
 
-        @media (max-width : 480px) {
+        @media (max-width : 1199px) {
           font-size: 15px;
           padding : 0px;
           width : 150px;

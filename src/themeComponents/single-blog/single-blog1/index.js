@@ -20,11 +20,11 @@ const SingleBlog = () => {
       <section className={style.singleBlog}>
         <div className="container">
           <div className="row">
-            <div className="col-xl-4 col-12">
+            <div className="col-lg-4 col-12">
               <BlogSidebar />
             </div>
 
-            <div className="col-xl-8 col-12">
+            <div className="col-lg-8 col-12">
               <div className="blog-img">
                 <Image src={blogImg} alt="blog-img" />
               </div>

@@ -1,4 +1,3 @@
-
 import Form from "react-bootstrap/Form";
 import Visa from "./assets/images/visa.svg";
 import Truck from "./assets/images/truck.svg";
@@ -15,8 +14,8 @@ const PayMethod = () => {
           <form>
             <div className="radio-row">
               <div className="form-group">
-                <input type="radio" className="form-check" name="radio1" />
                 <label>
+                  <input type="radio" className="form-check" name="radio1" />
                   <span>
                     <Visa />
                   </span>
@@ -25,8 +24,8 @@ const PayMethod = () => {
               </div>
 
               <div className="form-group">
-                <input type="radio" className="form-check" name="radio1"/>
                 <label>
+                  <input type="radio" className="form-check" name="radio1" />
                   <span>
                     <Truck />
                   </span>
@@ -35,8 +34,8 @@ const PayMethod = () => {
               </div>
 
               <div className="form-group">
-                <input type="radio" className="form-check" name="radio1"/>
                 <label>
+                  <input type="radio" className="form-check" name="radio1" />
                   <span>
                     <Money />
                   </span>

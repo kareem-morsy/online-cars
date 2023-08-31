@@ -108,13 +108,13 @@ const AboutUs = () => {
         <div className="vision">
           <div className="container">
             <div className="row">
-              <div className="col-md-7 col-12">
+              <div className="col-md-6 col-xl-7 col-12">
                 <div className="vision-img">
                   <Image src={about} alt="img" />
                 </div>
               </div>
 
-              <div className="col-md-5 col-12">
+              <div className="col-md-6 col-xl-5 col-12">
                 <div className="vision-content">
                   <h4>نبذة عنا</h4>
                   <h6>مهمتنا ورؤيتنا</h6>
@@ -157,10 +157,24 @@ const AboutUs = () => {
 
           <div className="testminals-slider">
             <Swiper
-              slidesPerView={2.8}
               spaceBetween={41}
               centeredSlides={true}
               loop={true}
+              breakpoints={{
+                1200: {
+                  slidesPerView: 2.8,
+                },
+                990: {
+                  slidesPerView: 2,
+                },
+                480: {
+                  slidesPerView: 2,
+                },
+    
+                1: {
+                  slidesPerView: 1,
+                },
+              }}
               pagination={{
                 clickable: true,
               }}
