@@ -24,7 +24,7 @@ const Blog = () => {
       />
 
       <Header />
-      <BreadCramb pageName={<FormattedMessage id="categories" />} />
+      <BreadCramb pageName={<FormattedMessage id="blog" />} />
       <SingleBlog/>
       <Footer />
     </>

@@ -28,8 +28,11 @@ const ProdutsRelated = () => {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              990: {
+              1200: {
                 slidesPerView: 4,
+              },
+              990: {
+                slidesPerView: 3,
               },
               480: {
                 slidesPerView: 2,

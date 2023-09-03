@@ -9,7 +9,7 @@ const ContactDetails = () => {
     <>
       <div className="contact-details">
         <div className="row">
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-12">
             <div className="contact-details-card">
               <div className="card-icon">
                 <Call />
@@ -32,7 +32,7 @@ const ContactDetails = () => {
             </div>
           </div>
 
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-12">
             <div className="contact-details-card middle-card">
               <div className="card-icon">
                 <Location />
@@ -49,7 +49,7 @@ const ContactDetails = () => {
             </div>
           </div>
 
-          <div className="col-lg-4">
+          <div className="col-lg-4 col-12">
             <div className="contact-details-card">
               <div className="card-icon">
                 <Sms />

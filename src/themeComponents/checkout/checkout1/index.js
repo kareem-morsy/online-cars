@@ -10,12 +10,12 @@ const CheckOut = () => {
       <div className={style.Checkout}>
         <div className="container">
           <div className="row">
-            <div className="col-md-7 col-12">
+            <div className="col-lg-7 col-12">
               <AddressContainer />
               <PayMethod/>
             </div>
 
-            <div className="col-md-5 col-12">
+            <div className="col-lg-5 col-12">
               <Summary/>
               <TotalPay/>
             </div>

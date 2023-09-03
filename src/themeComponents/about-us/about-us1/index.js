@@ -5,14 +5,9 @@ import { FormattedMessage } from "react-intl";
 import UL from "./assets/images/UL.svg";
 import banner from "./assets/images/banner.png";
 import about from "./assets/images/about.png";
-import textR from "./assets/images/textRight.png";
-import textL from "./assets/images/textLeft.png";
-import test1 from "./assets/images/test1.png";
-import test2 from "./assets/images/test2.png";
-import test3 from "./assets/images/test3.png";
-import Quotes from "./assets/images/Quotes.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+
+import Link from "next/link";
+import AboutReviews from "./AboutReviews";
 
 const AboutUs = () => {
   return (
@@ -102,7 +97,11 @@ const AboutUs = () => {
         </div>
 
         <div className="intro-banner">
-          <Image src={banner} alt="Image" />
+          <Link href="/">
+            <a>
+              <Image src={banner} alt="Image" />
+            </a>
+          </Link>
         </div>
 
         <div className="vision">
@@ -142,7 +141,7 @@ const AboutUs = () => {
           </div>
         </div>
 
-        <div className="testminals">
+        {/* <div className="testminals">
           <div className="testminals-title">
             <div className="test-img">
               <Image src={textR} alt="Image" />
@@ -170,7 +169,7 @@ const AboutUs = () => {
                 480: {
                   slidesPerView: 2,
                 },
-    
+
                 1: {
                   slidesPerView: 1,
                 },
@@ -297,7 +296,9 @@ const AboutUs = () => {
               </SwiperSlide>
             </Swiper>
           </div>
-        </div>
+        </div> */}
+
+        <AboutReviews />
       </section>
     </>
   );

@@ -12,7 +12,7 @@ import { useRouter } from "next/router";
 import { FormattedMessage, useIntl } from "react-intl";
 
 
-const MobileNav = ({ setShowHiddenSidebars, showHiddenSidebars }) => {
+const MobileNav = (props) => {
   const { asPath, locale } = useRouter();
   const { formatMessage } = useIntl();
 
@@ -20,7 +20,7 @@ const MobileNav = ({ setShowHiddenSidebars, showHiddenSidebars }) => {
     <>
       <div
         className={`mobile-navbar  ${
-          showHiddenSidebars ? "show-side" : "hide-side"
+          props.showHiddenSidebars ? "show-side" : "hide-side"
         }`}
       >
         <div className="mobile-nav-head">
@@ -34,7 +34,7 @@ const MobileNav = ({ setShowHiddenSidebars, showHiddenSidebars }) => {
 
           <button
             className="close-btn"
-            onClick={() => setShowHiddenSidebars(!showHiddenSidebars)}
+            onClick={props.toggleDropdown}
           >
             <Close />
           </button>

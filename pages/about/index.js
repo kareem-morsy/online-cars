@@ -23,7 +23,7 @@ const About = () => {
       />
 
       <Header />
-      <BreadCramb pageName={<FormattedMessage id="categories" />} />
+      <BreadCramb pageName={<FormattedMessage id="about" />} />
       <AboutUs/>
       <Footer />
     </>

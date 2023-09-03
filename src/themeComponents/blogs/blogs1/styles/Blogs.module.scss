@@ -48,8 +48,18 @@
             display: flex;
             margin: 15px 0px;
 
+            [dir="ltr"] & {
+              p {
+                order: 2;
+              }
+            }
+
             [data-theme="dark"] & {
               color: #fff;
+
+              svg {
+                filter: brightness(0) invert(1);
+              }
             }
 
             p {
@@ -108,7 +118,6 @@
             margin-right: 18px;
           }
 
-        
           // &::after{
           //   content: "";
           //   display: inline-block;

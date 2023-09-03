@@ -14,7 +14,7 @@ const BlogsComponent = () => {
         <div className="row">
           {blogPage?.map((blog, index) => {
             return (
-              <Col xl={3} lg={3} md={6} key={index}>
+              <Col xl={3} lg={4} md={6} key={index}>
                 <BlogCard blog={blog} />
               </Col>
             );

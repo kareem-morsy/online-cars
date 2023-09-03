@@ -309,6 +309,11 @@
           &::after {
             position: absolute;
             left: 0px;
+
+            [dir = "ltr"] & {
+              left: auto;
+              right: 0px;
+            }
           }
         }
 
@@ -531,7 +536,7 @@
           font-weight: 700;
           display: flex;
           align-items: center;
-          width: 85%;
+          width: 80%;
           padding-top: 15px;
 
           [data-theme="dark"] & {
@@ -542,6 +547,10 @@
             font-size: 19px;
             font-weight: 500;
             width: 73%;
+          }
+
+          @media (min-width : 1200px) and (max-width : 1400px) {
+            font-size: 24px;
           }
 
           &::before {
@@ -565,6 +574,10 @@
             background-color: #d3d3d3;
             margin-right: 35px;
             display: inline-block;
+            [dir = "ltr"] & {
+              margin-right: auto;
+              margin-left: 35px;
+            }
             @media (max-width: 991px) {
               display: none;
             }
@@ -800,7 +813,6 @@
     .accordion-header {
       height: 45px;
       padding: 0px 10px;
-      background-color: #242424;
       border-radius: 2px 2px 0px 0px;
       button {
         padding: 20px 5px;

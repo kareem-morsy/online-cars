@@ -4,6 +4,8 @@ import product2 from "./assets/images/product2.png";
 import product3 from "./assets/images/product3.png";
 import Close from "./assets/images/Close.svg";
 import { FormattedMessage } from "react-intl";
+import Up from "./assets/images/up.svg";
+import Down from "./assets/images/down.svg";
 
 const SallaTable = () => {
   return (
@@ -42,14 +44,16 @@ const SallaTable = () => {
               </td>
               <td className="salla-price">55 ر.س</td>
               <td>
-                <div className="Salla-count">
-                  <input
-                    type="number"
-                    className="form-control"
-                    name="quantity"
-                    min="1"
-                    max="100"
-                  />
+                <div className="product-counter">
+                  <span>2</span>
+                  <div className="counter-buutons">
+                    <button>
+                      <Up />
+                    </button>
+                    <button>
+                      <Down />
+                    </button>
+                  </div>
                 </div>
               </td>
               <td>10 ر.س</td>
@@ -74,15 +78,16 @@ const SallaTable = () => {
               </td>
               <td className="salla-price">55 ر.س</td>
               <td>
-                <div className="Salla-count">
-                  <input
-                    type="number"
-                    className="form-control"
-                    name="quantity"
-                    min="1"
-                    max="100"
-                    id="quantity"
-                  />
+                <div className="product-counter">
+                  <span>2</span>
+                  <div className="counter-buutons">
+                    <button>
+                      <Up />
+                    </button>
+                    <button>
+                      <Down />
+                    </button>
+                  </div>
                 </div>
               </td>
               <td>10 ر.س</td>
@@ -107,14 +112,16 @@ const SallaTable = () => {
               </td>
               <td className="salla-price">55 ر.س</td>
               <td>
-                <div className="Salla-count">
-                  <input
-                    type="number"
-                    className="form-control"
-                    name="quantity"
-                    min="1"
-                    max="100"
-                  />
+                <div className="product-counter">
+                  <span>2</span>
+                  <div className="counter-buutons">
+                    <button>
+                      <Up />
+                    </button>
+                    <button>
+                      <Down />
+                    </button>
+                  </div>
                 </div>
               </td>
               <td>10 ر.س</td>

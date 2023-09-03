@@ -34,12 +34,15 @@
 
         ul {
           columns: 2;
+          @media (max-width : 991px) {
+            columns: 1;
+          }
           li {
             display: flex;
             gap: 25px;
             margin-bottom: 30px;
-            @media (max-width: 767px) {
-              gap: 0px;
+            @media (max-width: 1199px) {
+              gap: 10px;
             }
             p {
               color: #888;
@@ -47,6 +50,16 @@
               font-weight: 300;
               [data-theme="dark"] & {
                 color: #d3c2c2;
+              }
+
+              @media (min-width : 992px) and (max-width : 1199px){
+                font-size: 14px;
+              }
+            }
+
+            [dir = "ltr"] &{
+              span{
+                transform: rotate(180deg);
               }
             }
           }
@@ -139,6 +152,10 @@
             color: #888;
             font-size: 16px;
             font-weight: 500;
+            [dir = "ltr"] & {
+              margin-right: 0px;
+              margin-left: 15px;
+            }
           }
         }
 
@@ -189,6 +206,13 @@
           @media (max-width: 1024px) {
             display: none;
           }
+
+          [dir = "ltr"] & {
+            img{
+              transform: rotate(180deg);
+
+            }
+          }
         }
       }
 
@@ -201,6 +225,9 @@
           @media (max-width: 991px) {
             flex-wrap: wrap;
           }
+          @media (min-width : 1200px) and (max-width : 1400px) {
+            gap : 21px;
+          }
           .test-card-img {
             width: 30%;
             height: 250px;
@@ -208,6 +235,9 @@
             @media (max-width: 991px) {
               width: 60%;
               margin: auto;
+            }
+            @media (min-width : 1200px) and (max-width : 1400px) {
+              width: 35%;
             }
             img {
               width: 100%;
@@ -222,6 +252,14 @@
             @media (max-width : 991px) {
               width: 95%;
               margin: auto;
+            }
+
+            .test-symbol{
+              svg{
+                [dir = "ltr"] &{
+                  transform: rotate(180deg);
+                }
+              }
             }
             p {
               color: #202020;
@@ -259,7 +297,7 @@
           }
         }
         .mainSwiper {
-          padding-bottom: 180px;
+          padding-bottom: 100px;
         }
 
         .swiper-pagination-bullets {

@@ -30,7 +30,12 @@ const SharedModal = (props) => {
         <div className="main-modal">
           <div className="container">
             <div className="row">
-              <p>sssss</p>
+              <div className="col-md-6 col-12">
+                <ProductImages />
+              </div>
+              <div className="col-md-6 col-12">
+                <ProductCardInfo />
+              </div>
             </div>
           </div>
         </div>

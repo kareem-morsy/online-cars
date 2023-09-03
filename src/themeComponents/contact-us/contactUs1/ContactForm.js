@@ -11,9 +11,9 @@ const ContactForm = () => {
             <div className="contact-form-details">
               <div className="title">
                 <h2>
-                  تواصل 
+                  <FormattedMessage id="contnect" />
                  
-                  <span> معنا </span>
+                  <span> <FormattedMessage id="us"/></span>
                 </h2>
               </div>
               <p>
@@ -26,7 +26,9 @@ const ContactForm = () => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="الاسم"
+                    placeholder={formatMessage({
+                      id: "fullName",
+                    })}
                   />
                 </div>
 
@@ -34,19 +36,23 @@ const ContactForm = () => {
                   <input
                     type="email"
                     className="form-control"
-                    placeholder="البريد الالكترونى"
-                  />
+                    placeholder={formatMessage({
+                      id: "email",
+                    })}                  />
                 </div>
 
                 <div className="form-group">
                   <input
                     type="tel"
                     className="form-control"
-                    placeholder="رقم الهاتف"
-                  />
+                    placeholder={formatMessage({
+                      id: "phone",
+                    })}                  />
                 </div>
 
-                <button type="submit">ارسال</button>
+                <button type="submit">
+                  <FormattedMessage id="sendBtn" />
+                </button>
               </form>
             </div>
           </div>

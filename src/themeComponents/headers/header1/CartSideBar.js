@@ -9,16 +9,16 @@ import Image from "next/future/image";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import styles from "./styles/Header2.module.scss";
 
-const CartSideBar = ({toggleSideCart , showSideCart}) => {
+const CartSideBar = (props) => {
   
 
   return (
     <>
-      <div className={`cartSidebar ${showSideCart ? "cartShow" : ''}`}>
+      <div className={`cartSidebar ${props.showSideCart ? "cartShow" : ''}`}>
         <div className="grand-sidebar">
           <div className="cartSidebar-header">
             <h3>سلة التسوق</h3>
-            <button onClick={toggleSideCart}>
+            <button onClick={props.toggleSideCart}>
               <Close />
             </button>
           </div>
@@ -162,7 +162,7 @@ const CartSideBar = ({toggleSideCart , showSideCart}) => {
           </div>
         </div>
 
-        <div className={`siderbar-overlay ${showSideCart ? "showOverlay" : ''}`}></div>
+        <div className={`siderbar-overlay ${props.showSideCart ? "showOverlay" : ''}`}></div>
       </div>
     </>
   );

@@ -37,7 +37,7 @@ const RecentlyCard = ({ product }) => {
             <button>
               <Fav />
             </button>
-            <button>
+            <button onClick={handleShow}>
               <Zoom />
             </button>
           </div>
@@ -61,7 +61,7 @@ const RecentlyCard = ({ product }) => {
         </div>
       </div>
 
-      <SharedModal show={show} onHide={handleClose} />
+      <SharedModal show={show} handleClose={handleClose} />
     </>
   );
 };

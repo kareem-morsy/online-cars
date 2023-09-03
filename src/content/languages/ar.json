@@ -113,7 +113,7 @@
     "backToCart"    : "الرجوع الى سلة الشراء",
     "payNow"        : "ادفع الان",
     "idNumber"      : "رقم البطاقة",
-    "idOwner"       : "اسم حامل البطاقة",
+    "idOwner"       : "الاسم على البطاقة",
     "SecretPass"    : "الرمز السرى",
     "expiredDate"   : "تاريخ الانتهاء",
     "firstName"     : "الاسم الاول",
@@ -145,7 +145,15 @@
     "categories"    : "التصنيفات",
     "salla"         : "سلة الشراء",
     "commonQues"    : "الاسئلة الشائعة",
-    "controlPanel"  : "لوحة التحكم"
+    "controlPanel"  : "لوحة التحكم", 
+    "us"            : "معنا",
+    "contnect"      : "تواصل",
+    "mdiscount"     : "تطبيق الخصم",
+    "pay"           : "الدفع",
+    "cvv"           : "رقم الـ cvv",
+    "delivery"      : "التوصيل",
+    "change"        : "تغيير",
+    "compeletOrder" : "تاكيد الطلب"
  
     
     

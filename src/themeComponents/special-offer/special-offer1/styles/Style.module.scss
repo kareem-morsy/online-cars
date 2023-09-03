@@ -11,14 +11,12 @@
         font-weight: 700;
         display: flex;
         align-items: center;
-        width: 85%;
+        width: 80%;
         padding-top: 15px;
 
         [data-theme="dark"] & {
           color: #fff;
         }
-
-        
 
         &::before {
           content: "";
@@ -41,11 +39,15 @@
           background-color: #d3d3d3;
           margin-right: 35px;
           display: inline-block;
+          [dir="ltr"] & {
+            margin-right: auto;
+            margin-left: 35px;
+          }
           @media (max-width: 991px) {
             display: none;
           }
 
-          @media (min-width : 768px) and (max-width : 991px) {
+          @media (min-width: 768px) and (max-width: 991px) {
             width: 55%;
           }
         }
@@ -119,7 +121,7 @@
           }
         }
 
-        @media (min-width : 992px) and (max-width : 1199px) {
+        @media (min-width: 992px) and (max-width: 1199px) {
           width: 95%;
         }
       }
@@ -477,31 +479,28 @@
     }
 
     .mob-slider {
-
       display: none;
       @media (max-width: 991px) {
         display: block;
       }
-      
-      .special-offer-slider{
-        padding : 5px;
 
-        .main-card{
-          padding : 5px;
-          width : 95%;
-          margin : 0px auto;
+      .special-offer-slider {
+        padding: 5px;
+
+        .main-card {
+          padding: 5px;
+          width: 95%;
+          margin: 0px auto;
         }
 
         .offer-timer {
           width: 100%;
-          padding : 10px;
-          @media (min-width : 500px) and (max-width : 991px) {
+          padding: 10px;
+          @media (min-width: 500px) and (max-width: 991px) {
             width: 70%;
           }
         }
       }
-
-      
 
       .swiper-bttns {
         width: 95%;

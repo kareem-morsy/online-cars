@@ -2,29 +2,30 @@
   :global {
     position: relative;
     height: auto;
-    .form-bg{
-      width: 100%;
-      height : 100%;
-      img{
-        width : 100%;
-        height : 100%;
-      }
-    }
 
-    @media (max-width: 991px) {
-      flex-wrap: wrap;
-      height: auto;
+   
+   
+    .form-bg {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
     }
 
     .main-form-details {
       position: absolute;
-      background-color: rgba(255, 255, 255, 0.90);
-      inset : 80px;
+      background-color: rgba(255, 255, 255, 0.9);
+      inset: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 90%;
       border-radius: 25px;
+
+      @media (max-width: 767px) {
+        inset: 10px 5px;
+      }
 
       .main-form-logo {
         width: 250px;
@@ -45,12 +46,11 @@
       }
 
       @media (min-width: 601px) and (max-width: 1250px) {
-        width: 70%;
+        width: 80%;
         margin: 0px auto;
         padding: 15px;
       }
     }
-
 
     h3 {
       color: #2b0000;
@@ -81,8 +81,13 @@
       flex-direction: row;
       gap: 25px;
       width: 70%;
-      margin : 50px auto;
+      margin: 50px auto;
       justify-content: center;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        gap: 10px;
+      }
 
       a {
         border-radius: 8px;
@@ -140,9 +145,13 @@
         width: 100%;
       }
 
+      @media (min-width : 992px) and (max-width: 1299px) {
+        width: 80%;
+      }
+
       form {
         label {
-          color: rgba(0, 0, 0, 0.60);
+          color: rgba(0, 0, 0, 0.6);
           font-size: 14px;
           font-weight: 600;
           margin-bottom: 21px;
@@ -157,7 +166,6 @@
 
           p {
             font-size: 12px;
-
           }
         }
 
@@ -170,17 +178,14 @@
 
           &:focus {
             box-shadow: 0px 0px 0px transparent;
-            border: 1px solid #FC5A34 !important;
+            border: 1px solid #fc5a34 !important;
           }
 
           [data-theme="dark"] & {
             background-color: #2c3034;
             color: #fff;
-
           }
         }
-
-       
 
         button {
           width: 45%;
@@ -201,25 +206,20 @@
         display: flex;
         border-radius: 8px;
         border: 1px solid #040414;
-        
-      
 
         input {
           width: 85%;
           height: 100%;
           border: 0px solid transparent !important;
 
-          &:focus{
-            border: 0px solid #FC5A34 !important;
-            
-            
+          &:focus {
+            border: 0px solid #fc5a34 !important;
           }
 
           [data-theme="dark"] & {
             background-color: #2c3034;
             color: #fff;
             border-radius: 0px 6px 6px 0px;
-
           }
         }
 
@@ -294,7 +294,7 @@
       }
 
       a {
-        color: #FC5A34;
+        color: #fc5a34;
         font-size: 14px;
         font-weight: 800;
         text-decoration: underline;

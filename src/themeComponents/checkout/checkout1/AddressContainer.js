@@ -13,9 +13,11 @@ const AddressContainer = () => {
     <>
       <div className="address-container">
         <div className="address-info">
-          <h2>معلومات التوصيل</h2>
+          <h2><FormattedMessage id="deliveryInfo"/></h2>
 
-          <button onClick={handleShow}>اضافة عنوان جديد</button>
+          <button onClick={handleShow}>
+            <FormattedMessage id="AddNewAddress" />
+          </button>
         </div>
 
         <div className="address-details">
@@ -29,7 +31,7 @@ const AddressContainer = () => {
               <span>
                 <Edit />
               </span>
-              تغيير
+              <FormattedMessage id="change"/>
             </button>
           </div>
         </div>

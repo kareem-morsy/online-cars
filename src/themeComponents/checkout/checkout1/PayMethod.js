@@ -3,12 +3,13 @@ import Visa from "./assets/images/visa.svg";
 import Truck from "./assets/images/truck.svg";
 import Money from "./assets/images/money.svg";
 import Credit from "./assets/images/creditcard.svg";
+import { FormattedMessage } from "react-intl";
 
 const PayMethod = () => {
   return (
     <>
       <div className="paymthod-section">
-        <h2>الدفع</h2>
+        <h2><FormattedMessage id="pay"/></h2>
 
         <div classname="pay-form">
           <form>
@@ -48,7 +49,7 @@ const PayMethod = () => {
               <div className="row">
                 <div className="col-md-6 col-12">
                   <div className="form-group">
-                    <label>الاسم على البطاقة</label>
+                    <label><FormattedMessage id="idOwner"/></label>
                     <input
                       type="text"
                       placeholder="محمد السيد ابراهيم"
@@ -58,7 +59,7 @@ const PayMethod = () => {
                 </div>
                 <div className="col-md-6 col-12">
                   <div className="form-group">
-                    <label>رقم الكارت</label>
+                    <label><FormattedMessage id="cardNumber"/></label>
                     <input type="text" className="form-control" />
                     <span>
                       <Credit />
@@ -67,13 +68,13 @@ const PayMethod = () => {
                 </div>
                 <div className="col-md-6 col-12">
                   <div className="form-group">
-                    <label>تاريخ الانتهاء</label>
+                    <label><FormattedMessage id="expiredDate"/></label>
                     <input type="text" className="form-control" />
                   </div>
                 </div>
                 <div className="col-md-6 col-12">
                   <div className="form-group">
-                    <label>رقم ال CVV</label>
+                    <label><FormattedMessage id="cvv"/></label>
                     <input type="text" className="form-control" />
                   </div>
                 </div>

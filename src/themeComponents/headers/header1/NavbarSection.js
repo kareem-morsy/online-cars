@@ -4,25 +4,22 @@ import Container from "react-bootstrap/Container";
 import Menu from "./assets/images/menu.svg";
 import BagIcon from "./assets/images/bag.svg";
 import Search from "./assets/images/search.svg";
-import Like from "./assets/images/like.svg"
-import User from "./assets/images/user.svg"
+import Like from "./assets/images/like.svg";
+import User from "./assets/images/user.svg";
 import { useRouter } from "next/router";
 import logo from "./assets/images/logo.png";
 import Link from "next/link";
 import Image from "next/future/image";
 import React, { useState } from "react";
 import CartSideBar from "./CartSideBar";
-import SearchModal from "./SearchModal";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import MobileNav from "./MobileNav";
 
 const NavbarSection = (props) => {
+  const { formatMessage } = useIntl();
   const { pathname } = useRouter();
   const [showHiddenSidebars, setShowHiddenSidebars] = useState(false);
   const toggleDropdown = () => setShowHiddenSidebars(!showHiddenSidebars);
-
-  //search state
-  const [searchShow, setSearchShow] = useState(false);
 
   //cart Sidebar state
   const [showSideCart, setShowSideCart] = useState(false);
@@ -33,15 +30,12 @@ const NavbarSection = (props) => {
       <Navbar expand="lg" className="bg-body-tertiary navi">
         <Container>
           <div className="navbar-section">
-
             <Link href="/">
               <a className="navbar-brand">
-              <Image src={logo} alt="logo image" width={100} height={60} />
-
+                <Image src={logo} alt="logo image" width={100} height={60} />
               </a>
             </Link>
-            {/* <Navbar.Brand href="/">
-            </Navbar.Brand> */}
+
             <Nav className="nav-list">
               <Link href="/">
                 <a
@@ -97,15 +91,21 @@ const NavbarSection = (props) => {
               </Link>
             </Nav>
 
-
             <div className="search-box">
               <form>
                 <div className="form-group">
-                  <input type="text" placeholder="اكتب بحثك هنا" className="form-control"/>
-                  <span><Search/></span>
+                  <input
+                    type="text"
+                    placeholder={formatMessage({
+                      id: "searchContent",
+                    })}
+                    className="form-control"
+                  />
+                  <span>
+                    <Search />
+                  </span>
                 </div>
               </form>
-
             </div>
 
             <div className="navbar-details">
@@ -118,12 +118,14 @@ const NavbarSection = (props) => {
               </div>
 
               <div className="sub-details">
-                <button className="salla-link" onClick={toggleSideCart}>
-                  <div className="salla-notification">
-                    <Like />
-                    <span>1</span>
-                  </div>
-                </button>
+                <Link href="/favourites">
+                  <a className="salla-link" onClick={toggleSideCart}>
+                    <div className="salla-notification">
+                      <Like />
+                      <span>1</span>
+                    </div>
+                  </a>
+                </Link>
               </div>
 
               <div className="sub-details">
@@ -145,7 +147,7 @@ const NavbarSection = (props) => {
         </Container>
       </Navbar>
 
-      {/* <CartSideBar
+      <CartSideBar
         toggleSideCart={toggleSideCart}
         showSideCart={showSideCart}
       />
@@ -153,9 +155,8 @@ const NavbarSection = (props) => {
       <MobileNav
         showHiddenSidebars={showHiddenSidebars}
         setShowHiddenSidebars={setShowHiddenSidebars}
+        toggleDropdown={toggleDropdown}
       />
-
-      {searchShow && <SearchModal setSearchShow={setSearchShow} />} */}
     </>
   );
 };

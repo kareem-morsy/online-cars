@@ -113,7 +113,7 @@
     "backToCart"    : "Back to cart",
     "payNow"        : "Pay Now",
     "idNumber"      : "Card number",
-    "idOwner"       : "Owner Name",
+    "idOwner"       : "Name on card",
     "SecretPass"    : "Secret Code",
     "expiredDate"   : "Expired Date",
     "firstName"     : "First Name",
@@ -144,7 +144,16 @@
     "joinNewsLetter": "Join our newsletter",
     "categories"    : "Categories",
     "salla"         : "Shopping Cart",
-    "controlPanel"  : "Control Panel"
+    "controlPanel"  : "Control Panel", 
+    "us"            : "Us",
+    "contnect"      : "Contact",
+    "mdiscount"     : "Discount",
+    "pay"           : "Pay",
+    "cvv"           : "CVV No",
+    "delivery"      : "Delivery",
+    "change"        : "change",
+    "compeletOrder" : "Compelet Order"
+    
 
 
 

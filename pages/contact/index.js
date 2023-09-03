@@ -23,7 +23,7 @@ const Contact = () => {
       />
 
       <Header />
-      <BreadCramb pageName={<FormattedMessage id="categories" />} />
+      <BreadCramb pageName={<FormattedMessage id="contact" />} />
       <ContactUs/>
       <Footer />
     </>
