@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import { FormattedMessage } from "react-intl";
 import Edit from "./assets/images/edit.svg";
 import Hint from "./assets/images/hint.svg";
+import AdressModal from "./AdressModal";
 
 const AddressContainer = () => {
   //modal details
@@ -13,7 +14,9 @@ const AddressContainer = () => {
     <>
       <div className="address-container">
         <div className="address-info">
-          <h2><FormattedMessage id="deliveryInfo"/></h2>
+          <h2>
+            <FormattedMessage id="deliveryInfo" />
+          </h2>
 
           <button onClick={handleShow}>
             <FormattedMessage id="AddNewAddress" />
@@ -31,7 +34,7 @@ const AddressContainer = () => {
               <span>
                 <Edit />
               </span>
-              <FormattedMessage id="change"/>
+              <FormattedMessage id="change" />
             </button>
           </div>
         </div>
@@ -48,6 +51,9 @@ const AddressContainer = () => {
           <p>قم بتضمين نفس العنوان في الفاتورة</p>
         </div>
       </div>
+
+      <AdressModal show={show} handleClose={handleClose} />
+
     </>
   );
 };

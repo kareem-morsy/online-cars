@@ -153,7 +153,12 @@
     "cvv"           : "رقم الـ cvv",
     "delivery"      : "التوصيل",
     "change"        : "تغيير",
-    "compeletOrder" : "تاكيد الطلب"
+    "compeletOrder" : "تاكيد الطلب",
+    "companyName"   : "اسم الشركة",
+    "homeadress"    : "عنوان المنزل",
+    "street"        : "الحي",
+    "addNotes"      : "اضافة ملاحظات", 
+    "submitAddress" : "اضافة العنوان"
  
     
     

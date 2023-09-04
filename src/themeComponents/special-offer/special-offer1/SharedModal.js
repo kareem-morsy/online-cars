@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Thumbs } from "swiper";
 
 import Modal from "react-bootstrap/Modal";
-import styles from "./styles/Products.module.scss";
+import styles from "./styles/Style.module.scss";
 import { FormattedMessage } from "react-intl";
 import ProductImages from "./ProductImages";
 import ProductCardInfo from "./ProductCardInfo";
@@ -23,7 +23,8 @@ const SharedModal = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
       dialogClassName={styles.sharedModal}
-      show={props.show} onHide={props.handleClose}
+      show={props.show}
+      onHide={props.handleClose}
     >
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body>

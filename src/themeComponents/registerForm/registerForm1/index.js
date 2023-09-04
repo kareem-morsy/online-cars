@@ -35,7 +35,7 @@ const RegisterForm = () => {
     <>
       <section className={style.registerForm}>
         <div className="form-bg">
-          <Image src={bg} alt="background-img" />
+          <Image src={bg} alt="background-img" className="bg-img"/>
 
           <div className="main-form-details">
             <div className="main-form-logo">

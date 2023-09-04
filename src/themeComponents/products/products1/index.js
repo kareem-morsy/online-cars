@@ -8,17 +8,31 @@ import Pagination from "react-bootstrap/Pagination";
 import Filters from "./Filters";
 import Filtr from "./assets/images/filters.svg";
 import { useState } from "react";
+import ProductCardColumn from "./ProductCardColumn";
 
 const Products = () => {
-  const [showFilter , setShowFilter] = useState(false);
-  const toggleFilter = () => setShowFilter(!showFilter); 
+  const [shapeView, setShapeView] = useState(true);
+  const [showFilter, setShowFilter] = useState(false);
+  const toggleFilter = () => setShowFilter(!showFilter);
+
+  const renderProducts = filterPage.map((product, index) => {
+    return (
+      <div className="col-md-6 col-xl-4 col-12" key={index}>
+        <ProductCard product={product} />
+      </div>
+    );
+  });
+
+  const renderProductsColumn = filterPage.map((product, index) => {
+    return <ProductCardColumn product={product} key={index} />;
+  });
   return (
     <>
       <section className={style.productsSection}>
         <div className="container">
           <div className="row">
             <div className="col-lg-4 col-xl-3 col-12">
-              <Filters showFilter={showFilter} toggleFilter={toggleFilter}/>
+              <Filters showFilter={showFilter} toggleFilter={toggleFilter} />
             </div>
 
             <div className="col-lg-8 col-xl-9 col-12">
@@ -28,10 +42,10 @@ const Products = () => {
                     <div className="methods">
                       <div className="products-show">
                         <p>عرض</p>
-                        <button>
+                        <button onClick={() => setShapeView(true)}>
                           <Multi />
                         </button>
-                        <button>
+                        <button onClick={() => setShapeView(false)}>
                           <Single />
                         </button>
                       </div>
@@ -80,13 +94,11 @@ const Products = () => {
 
               <div className="products">
                 <div className="row">
-                  {filterPage.map((product, index) => {
-                    return (
-                      <div className="col-md-6 col-xl-4 col-12" key={index}>
-                        <ProductCard product={product} />
-                      </div>
-                    );
-                  })}
+                  {shapeView ? (
+                     renderProducts 
+                  ) : (
+                    <div className="col-12">{renderProductsColumn}</div>
+                  )}
                 </div>
               </div>
 

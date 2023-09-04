@@ -4,8 +4,13 @@ import Rate from "rc-rate";
 import Bag from "./assets/images/bag.svg";
 import Zoom from "./assets/images/zoom.svg";
 import Fav from "./assets/images/fav.svg";
+import { useState } from "react";
+import SharedModal from "./SharedModal";
 
 const ProductCard = ({ product }) => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="main-card">
@@ -22,7 +27,7 @@ const ProductCard = ({ product }) => {
             <button>
               <Fav />
             </button>
-            <button>
+            <button onClick={handleShow}>
               <Zoom />
             </button>
           </div>
@@ -45,6 +50,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </div>
+      <SharedModal show={show} handleClose={handleClose} />
     </>
   );
 };

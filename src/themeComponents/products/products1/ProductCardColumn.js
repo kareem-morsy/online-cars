@@ -12,54 +12,37 @@ const ProductCardColumn = ({ product }) => {
 
   return (
     <>
-      <div className="col-12">
-        <div className="filter-card-column">
-          <div className="filter-card-column-img">
-            <Image src={product?.image} alt="glass1" />
-            <div className="filter-card-pane">
-              <span className="new-pane">جديد</span>
-              <span className="discount-pane">50%</span>
-            </div>
-            <Link href="/single-product">
-              <a className="overlay-link"></a>
-            </Link>
+      <div className="offer-horizontal-card">
+        <div className="horizontal-img">
+          <Image src={product.image} alt="Image" />
+
+          <div className="card-pane">
+            <span>خصم 10% </span>
           </div>
-          <div className="filter-overlay">
-            <button>
-              <LikeIcon />
-            </button>
+          <Link href="/">
+            <a className="card-overlay"></a>
+          </Link>
+        </div>
 
-            <button>
-              <CompareIcon />
-            </button>
-
-            <button onClick={() => setModalShow(true)}>
-              <ZoomIcon />
-            </button>
+        <div className="horizontal-content">
+          <Link href="/">
+            <a className="horizontal-title">اسم المنتج يكتب هنا</a>
+          </Link>
+          <p className="horizontal-desc">
+            هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو{" "}
+          </p>
+          <div className="stars">
+            <Rate value={3.5} allowHalf="true" disabled />
           </div>
 
-          <div className="filter-card-column-content">
-            <Link href="/single-product">
-              <a className="filter-column-title">{product.title}</a>
-            </Link>
-
-            <p className="filter-column-desc">{product.description}</p>
-
-            <div className="stars">
-              <Rate value={3.5} allowHalf="true" disabled />
-            </div>
-
-            <div className="filter-card-price">
-              <span className="current-price">175 ر.س</span>
-              <span className="past-price">250 ر.س</span>
-            </div>
-
-            <button className="add-to-cart">اضف الى السلة</button>
+          <div className="horizontal-price">
+            <span className="current-price">175 ر.س</span>
+            <span className="past-price">250 ر.س</span>
           </div>
         </div>
       </div>
 
-      <SharedModal show={modalShow} onHide={() => setModalShow(false)} />
+      {/* <SharedModal show={modalShow} onHide={() => setModalShow(false)} /> */}
     </>
   );
 };

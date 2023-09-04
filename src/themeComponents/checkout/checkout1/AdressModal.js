@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { Col, Row } from "react-bootstrap";
 import style from "./styles/ModalStyle.module.scss";
+import { FormattedMessage } from "react-intl";
 
 const AdressModal = (props) => {
   return (
@@ -14,101 +15,71 @@ const AdressModal = (props) => {
           aria-labelledby="contained-modal-title-vcenter"
           centered
           className={style.locationModal}
+          show={props.show} onHide={props.handleClose}
         >
           <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <div className="add-modal">
-              <Form>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlInput1"
-                >
-                  <Form.Label>الاسم كاملا</Form.Label>
-                  <Form.Control type="text" placeholder="اكتب الاسم ثلاثي" />
-                </Form.Group>
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label>الدولة</Form.Label>
-                  <Form.Select size="lg">
-                    <option>اختر الدولة</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                  </Form.Select>
-                </Form.Group>
+              <form>
+                <div className="row">
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="firstName"/></label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="secondName"/></label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
 
-                <Row>
-                  <Col>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlTextarea1"
-                    >
-                      <Form.Label>المدينة</Form.Label>
-                      <Form.Select size="lg">
-                        <option>اختر المدينة</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </Form.Select>
-                    </Form.Group>
-                  </Col>
+                  <div className="col-md-12 col-12">
+                    <div className="form-group">
+                      <label>
+                        <FormattedMessage id="companyName"/>
+                      </label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
 
-                  <Col>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlTextarea1"
-                    >
-                      <Form.Label>المحافظة</Form.Label>
-                      <Form.Select size="lg">
-                        <option>اختر المحافظة</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                      </Form.Select>
-                    </Form.Group>
-                  </Col>
-                </Row>
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="homeadress"/></label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
 
-                <Form.Group
-                  className="mb-3"
-                  controlId="exampleForm.ControlTextarea1"
-                >
-                  <Form.Label>العنوان</Form.Label>
-                  <Form.Control
-                    as="textarea"
-                    rows={6}
-                    placeholder="اكتب العنوان كاملا"
-                  />
-                </Form.Group>
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="phone"/></label>
+                      <input type="tel" className="form-control" />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="government"/></label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
+                  <div className="col-md-6 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="street"/></label>
+                      <input type="text" className="form-control" />
+                    </div>
+                  </div>
 
-                <Row>
-                  <Col>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <Form.Label>الرقم البريدى</Form.Label>
-                      <Form.Control type="text" placeholder="الرقم البريدى" />
-                    </Form.Group>
-                  </Col>
-
-                  <Col>
-                    <Form.Group
-                      className="mb-3"
-                      controlId="exampleForm.ControlInput1"
-                    >
-                      <Form.Label>رقم الهاتف</Form.Label>
-                      <Form.Control type="tel" placeholder="رقم الهاتف" />
-                    </Form.Group>
-                  </Col>
-                </Row>
-
-                <div className="modal-submit">
-                  <button type="submit">اضافة عنوان جديد</button>
+                  <div className="col-md-12 col-12">
+                    <div className="form-group">
+                      <label><FormattedMessage id="addNotes"/></label>
+                      <textarea className="form-control"></textarea>
+                    </div>
+                  </div>
                 </div>
-              </Form>
+
+                <button type="submit"><FormattedMessage id="submitAddress"/></button>
+              </form>
             </div>
           </Modal.Body>
         </Modal>

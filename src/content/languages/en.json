@@ -152,7 +152,13 @@
     "cvv"           : "CVV No",
     "delivery"      : "Delivery",
     "change"        : "change",
-    "compeletOrder" : "Compelet Order"
+    "compeletOrder" : "Compelet Order", 
+    "companyName"   : "Company Name",
+    "homeadress"    : "Home Address",
+    "street"        : "Street",
+    "addNotes"      : "Add Notes", 
+    "submitAddress" : "Submit Address"
+    
     
 
 

@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Thumbs } from "swiper";
 
 import Modal from "react-bootstrap/Modal";
-import styles from "./styles/Products.module.scss";
+import styles from "./styles/Style.module.scss";
 import { FormattedMessage } from "react-intl";
 import ProductImages from "./ProductImages";
 import ProductCardInfo from "./ProductCardInfo";
