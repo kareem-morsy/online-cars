@@ -9,6 +9,7 @@ import Filters from "./Filters";
 import Filtr from "./assets/images/filters.svg";
 import { useState } from "react";
 import ProductCardColumn from "./ProductCardColumn";
+import Arrow from "./assets/images/arrow.svg";
 
 const Products = () => {
   const [shapeView, setShapeView] = useState(true);
@@ -108,7 +109,7 @@ const Products = () => {
                   <Pagination.Item>{2}</Pagination.Item>
                   <Pagination.Item>{3}</Pagination.Item>
                   <Pagination.Item>{4}</Pagination.Item>
-                  <Pagination.Next />
+                  <Pagination.Next ><Arrow/></Pagination.Next>
                 </Pagination>
               </div>
             </div>

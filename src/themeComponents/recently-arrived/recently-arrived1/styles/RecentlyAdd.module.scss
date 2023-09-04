@@ -291,7 +291,7 @@
     .mob-swiper{
       .buttons-overlay {
         position: absolute;
-        opacity: 1;
+        opacity: 1 !important;
         bottom: 10px;
         display: flex;
         width: 100%;
@@ -311,7 +311,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          opacity: 1;
+          opacity: 1 !important;
           transition: 0.3s;
           border-radius: 10px;
          
@@ -326,13 +326,7 @@
             filter: brightness(1) invert(0);
           }
 
-          // &:hover {
-          //   background-color: #4158f2;
-          //   color: #fff;
-          //   svg {
-          //     filter: brightness(0) invert(1);
-          //   }
-          // }
+          
         }
       }
     }
@@ -341,10 +335,8 @@
 
 .sharedModal {
   :global {
-    .modal-dialog {
-      @media (max-width: 1199px) {
-        max-width: 85%;
-      }
+    @media (max-width: 1199px) {
+      max-width: 85% !important;
     }
     /*start product card*/
     .product-info {
@@ -547,6 +539,12 @@
       .swiper-slide {
         width: 100%;
         height: 600px;
+        @media (max-width: 1199px) {
+          height: auto;
+          .slide {
+            height: 350px;
+          }
+        }
       }
       .slide {
         width: 100%;
